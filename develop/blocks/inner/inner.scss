@@ -1,0 +1,5 @@
+// mixin container is inside variables.scss
+
+.inner {
+    @include container;
+}

@@ -1,0 +1,55 @@
+.catalog {
+    padding-top: 40px;
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 -15px 40px;
+    }
+
+    &__card {
+        width: 25%;
+        padding: 0 15px 30px;
+    }
+}
+
+@media #{$laptop} {
+    .catalog {
+        &__card {
+            width: 33%;
+        }
+    }
+}
+@media #{$tablet} {
+    .catalog {
+        &__card {
+            width: 50%;
+        }
+    }
+}
+
+@media #{$mobile} {
+    .catalog {
+        padding-top: 20px;
+        
+        &.recommendations {
+            .catalog__card {
+                &:nth-child(n + 5) {
+                    display: none;
+                }
+            }
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__card {
+            width: 100%;
+        }
+    }
+}

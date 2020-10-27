@@ -1,0 +1,5 @@
+mixin counter(mod='')
+    +b.counter(class=mod)
+        +e.BUTTON.control.--minus(type='button' title='Уменьшить количество')
+        +e.INPUT.current(name='amount' readonly='' value='0')
+        +e.BUTTON.control.--plus(type='button' title='Увеличить количество')

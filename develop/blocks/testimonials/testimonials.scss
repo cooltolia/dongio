@@ -1,0 +1,115 @@
+.testimonials {
+    margin-bottom: 70px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        max-width: 550px;
+    }
+
+    &__controls {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    &__control {
+        @include btn-reset;
+        position: relative;
+        width: 25px;
+        height: 25px;
+
+        background-color: #fff;
+        border: 1px solid $grey-light;
+        border-radius: 4px;
+
+        transition: background-color 300ms ease;
+
+        &:hover {
+            background-color: $grey-light;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-25%, -40%) rotate(45deg);
+
+            border: 1px solid $text-color;
+            border-top-width: 0;
+            border-right-width: 0;
+        }
+
+        &.next::before {
+            transform: translate(-75%, -40%) rotate(-135deg);
+        }
+    }
+
+    &__progress {
+        padding: 0 6px;
+
+        font-size: 14px;
+        line-height: 1.4;
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    &__slider {
+        display: flex;
+        margin: 0 -15px;
+    }
+
+    &__slide {
+        width: 30%;
+        padding: 0 15px;
+        flex: 1 1 auto;
+    }
+}
+
+@media #{$tablet} {
+    .testimonials {
+        &__slide {
+            width: 50%;
+
+            &:nth-child(n + 3) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media #{$mobile} {
+    .testimonials {
+        margin-bottom: 40px;
+
+        &__header {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        &__title {
+            width: 100%;
+            margin-bottom: 20px;
+
+            
+        }
+
+        &__slide {
+            width: 100%;
+
+            &:nth-child(n + 2) {
+                display: none;
+            }
+        }
+    }
+}

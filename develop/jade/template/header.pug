@@ -1,0 +1,30 @@
+include ../includes/bemto
+include ../includes/mixins
+
+mixin doc-header()
+    head
+        meta(charset='utf-8' lang='ru-Ru')
+        meta(name='keywords', content='')
+        meta(content='IE=edge')&attributes({'http-equiv': "X-UA-Compatible"})
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Dongio Pizza
+        link(rel='icon' type='image/png' href='/favicon_16.png' sizes='16x16')  
+        link(rel='icon' type='image/png' href='/favicon_32.png' sizes='32x32')  
+        link(rel='icon' type='image/png' href='/favicon_96.png' sizes='96x96')  
+        meta(name="theme-color" content="#ab3030")
+        //- link(rel="preload", href="fonts/TTNorms/TTNorms-Regular.woff2" crossorigin="anonymous" as='font' type="font/woff2")
+        //- link(rel="preload", href="fonts/TTNorms/TTNorms-Bold.woff2" crossorigin="anonymous" as='font' type="font/woff2")
+        //- link(rel="preload", href="fonts/TTNorms/TTNorms-Medium.woff2" crossorigin="anonymous" as='font' type="font/woff2")
+        block
+
+        // build:css css/vendor.css    
+
+        //- link(href='libs/flickity/flickity.css', rel='stylesheet')
+        //- link(href='libs/simpleBar/simplebar.css', rel='stylesheet')
+        //- link(href='libs/fslightbox/fslightbox.min.css', rel='stylesheet')
+
+        // endbuild
+
+        // build:css css/main.css
+        link(href='css/main.css', rel='stylesheet')
+        // endbuild 

@@ -1,0 +1,12 @@
+mixin catalog(title = '', hasFilter = false, products)
+    +b.SECTION.catalog&attributes(attributes )
+        +inner
+            +e.title
+                +title
+                    | !{title}
+            if (hasFilter)
+                +e.filter
+            +e.list
+                each product in products
+                    +e.card
+                        +product-card(product)

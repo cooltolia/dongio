@@ -1,0 +1,24 @@
+mixin about()
+    +b.SECTION.about
+        +inner
+            +e.wrapper
+                +e.video
+                    img(src='images/about/poster.jpg', alt="")
+                    +e.BUTTON.play
+                        include ../../../app/images/play.svg
+                +e.content
+                    +e.title
+                        +title
+                            | Секрет нашей пиццы — тесто
+                    +e.text
+                        p 
+                            | Мы готовим тесто без добавления яиц и молока, на алтайской муке двухдневного созревания. Никогда его не замораживаем. Благодаря такой технологии пицца получается нежная, вкусная и лучше усваивается.
+                    +e.advantages
+                        +e.advantage
+                            .icon
+                                img(src='images/about/icon1.svg', alt='')
+                            .label Всегда свежая и нежная основа
+                        +e.advantage
+                            .icon
+                                img(src='images/about/icon2.svg', alt='')
+                            .label Отборные ингридиенты

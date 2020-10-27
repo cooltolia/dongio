@@ -1,0 +1,16 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +main-hero
+        -const productsList = products.filter((item, index) => {if (index < 8) {item.index = index; return item}})
+        +catalog('Рекомендуем', false, productsList)(class='recommendations')
+        +about
+        +testimonials
+        +doc-footer

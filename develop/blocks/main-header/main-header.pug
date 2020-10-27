@@ -1,0 +1,47 @@
+mixin main-header()
+    +b.HEADER.main-header
+        +e.top
+            +e.A.logo(href='#' title='Dongio Pizza')
+                img(src='images/logo.svg', alt='Dongio Pizza')
+            +e.delivery
+                +delivery-info
+            +e.contacts
+                +e.worktime Доставка с 13:00 до 22:00
+                +e.call
+                    +e.BUTON.call-appeal(type='button') Заказать звонок
+                    +e.A.call-phone(href='tel: 204-54-14') 204 - 54 - 14
+            +e.NAV.menu
+                +e.UL.menu-list
+                    +e.LI.menu-item
+                        +e.A.menu-link(href='#') Доставка и оплата
+                    +e.LI.menu-item
+                        +e.A.menu-link(href='#') Акции и бонусы
+                    +e.LI.menu-item
+                        +e.A.menu-link(href='#') Наша команда и кафе
+            +e.account
+                +account-trigger
+            +e.cart.--mobile
+                +cart-info('empty')
+            +e.hamburger
+                +hamburger
+        +e.bottom
+            +e.bottom-row
+                +e.NAV.categories.scroll-start
+                    +e.UL.categories-list
+                        +e.LI.category
+                            +e.A.category-link(href='#') Пиццы
+                        +e.LI.category
+                            +e.A.category-link(href='#') Бургеры
+                        +e.LI.category
+                            +e.A.category-link(href='#') Закуски
+                        +e.LI.category
+                            +e.A.category-link(href='#') Салаты
+                        +e.LI.category
+                            +e.A.category-link(href='#') Напитки
+                +e.A.favourites(href='#')
+                    +icon('favourites')
+                    | Избранное
+                +e.cart
+                    +cart-info
+        +e.mobile-menu
+            +mobile-menu

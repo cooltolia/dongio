@@ -1,0 +1,9 @@
+mixin breadcrumbs(links)
+    +b.breadcrumbs
+        +inner
+            +e.UL.list
+                +e.LI.item
+                    +e.A.link(href='../' title='Главная') Главная
+                each link in links
+                    +e.LI.item
+                        +e.A.link(href='#') !{link}

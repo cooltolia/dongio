@@ -1,0 +1,44 @@
+mixin picture-helper(images, lazyload = false, flickityLazyload = false)
+    if (lazyload)
+        picture
+            source(
+                data-srcset=images.desktop
+                media='(min-width: 1140px)'
+            )
+            source(
+                data-srcset=images.tablet
+                media='(min-width: 768px)'
+            )
+            img(
+                data-src=images.mobile
+                alt=""
+            )
+    else if (flickityLazyload)
+        picture
+            source(
+                data-flickity-lazyload-srcset=images.desktop
+                media='(min-width: 1140px)'
+            )
+            source(
+                data-flickity-lazyload-srcset=images.tablet
+                media='(min-width: 768px)'
+            )
+            img(
+                data-flickity-lazyload-src=images.mobile
+                alt=""
+            )
+    else
+        picture
+            source(
+                srcset=images.desktop
+                media='(min-width: 1140px)'
+            )
+            source(
+                srcset=images.tablet
+                media='(min-width: 768px)'
+            )
+            img(
+                src=images.mobile
+                alt=""
+            )
+    

@@ -1,0 +1,243 @@
+// $laptop: '(min-width: 992px)';
+$laptop: '(max-width: 1279px)';
+$tablet: '(max-width: 1040px)';
+$mobile: '(max-width: 767px)';
+
+$base-font-size: 16px;
+$font: 'Montserrat', Helvetica, Arial, sans-serif;
+$font-second: 'RobotoCondensed', Helvetica, Arial, sans-serif;
+
+$theme-color: #de3434;
+$theme-color-dark: #ab3030;
+$theme-orange: #ef6135;
+
+$text-color: #333333;
+$text-color-light: #828282;
+$text-color-white: #fff;
+
+$grey: #dfe7ec;
+$grey-light: #f5f7f8;
+$grey-dark: #757c80;
+
+@mixin btn-reset {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+@mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@mixin heading {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #191919;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: 480px) {
+        font-size: 10px;
+    }
+}
+
+@mixin svg-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+@mixin img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@mixin link-states {
+    transition: color 300ms ease;
+
+    &:hover {
+        color: $theme-color;
+    }
+
+    &:active {
+        color: $theme-color-dark;
+    }
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: '';
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@mixin container {
+    width: 100%;
+    // height: 100%;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1200px;
+    padding-left: 45px;
+    padding-right: 45px;
+
+    @media #{$tablet} {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @media #{$mobile} {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@mixin transition($prop, $time: 300ms, $type: ease) {
+    transition: $prop $time $type;
+}
+
+@mixin arrow($color: black) {
+    width: 7px;
+    height: 7px;
+    border: 2px solid $color;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+
+    top: 4px;
+    right: -10px;
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+
+@mixin common-list {
+    padding: 0;
+    margin: 0 0 16px;
+    list-style: none;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 16px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 17px;
+            height: 14px;
+            top: 6px;
+            left: 0;
+
+            background-image: url(../images/list-bullet.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@mixin ordered-list {
+    padding: 0;
+    margin: 0 0 16px;
+    list-style: none;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    counter-reset: ordered-list;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 16px;
+
+        counter-increment: ordered-list;
+
+        &::before {
+            content: counter(ordered-list) '.';
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            font-size: 18px;
+            line-height: 1.6;
+            color: #000;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@mixin common-text {
+    font-size: 16px;
+    line-height: 1.6;
+
+    p {
+        margin: 0 0 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@mixin common-link {
+    color: var(--base-color);
+    font-weight: 700;
+    text-decoration: underline;
+
+    transition: opacity 300ms ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        opacity: 0.6;
+        text-decoration: underline;
+    }
+}

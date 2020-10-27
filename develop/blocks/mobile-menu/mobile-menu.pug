@@ -1,0 +1,30 @@
+mixin mobile-menu()
+    +b.mobile-menu
+        +e.content
+            +e.inner
+                +e.account
+                    +account-trigger
+                +e.A.favourites
+                    +icon('favourites')
+                    | Избранное
+                +e.NAV.menu
+                    +e.UL.menu-list
+                        +e.LI.menu-item
+                            +e.A.menu-link(href='#') Доставка и оплата
+                        +e.LI.menu-item
+                            +e.A.menu-link(href='#') Акции и бонусы
+                        +e.LI.menu-item
+                            +e.A.menu-link(href='#') Наша команда и кафе
+                        +e.LI.menu-item
+                            +e.A.menu-link(href='#') Работа в DONGIO
+                        +e.LI.menu-item
+                            +e.A.menu-link(href='#') Поставщикам
+                        +e.LI.menu-item
+                            +e.A.menu-link(href='#') Корпоративные заказы
+                +e.contacts
+                    +e.worktime Доставка с 13:00 до 22:00
+                    +e.call
+                        +e.BUTON.call-appeal(type='button') Заказать звонок
+                        +e.A.call-phone(href='tel: 204-54-14') 204 - 54 - 14
+                +e.delivery
+                   +delivery-info

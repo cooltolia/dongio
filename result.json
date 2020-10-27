@@ -1,0 +1,435 @@
+{
+	"devNav": {
+		"main": [
+			{
+				"link": "main-page.html",
+				"text": "Главная страница"
+			}
+		]
+	},
+	"ingredients": [
+		{
+			"name": "Пепперони",
+			"price": "35 ₽"
+		},
+		{
+			"name": "Жареный цыпленок",
+			"price": "35 ₽"
+		},
+		{
+			"name": "Говядина",
+			"price": "35 ₽"
+		},
+		{
+			"name": "Бекон",
+			"price": "35 ₽"
+		},
+		{
+			"name": "Ветчина",
+			"price": "35 ₽"
+		},
+		{
+			"name": "Сыр «Пармезан»",
+			"price": "45 ₽"
+		},
+		{
+			"name": "Сыр «Дорблю»",
+			"price": "45 ₽"
+		},
+		{
+			"name": "Сыр «Чеддер»",
+			"price": "45 ₽"
+		},
+		{
+			"name": "Томаты",
+			"price": "30 ₽"
+		},
+		{
+			"name": "Соленые огурчики",
+			"price": "30 ₽"
+		},
+		{
+			"name": "Шампиньоны",
+			"price": "30 ₽"
+		},
+		{
+			"name": "Халапеньо",
+			"price": "30 ₽"
+		},
+		{
+			"name": "Маслины",
+			"price": "30 ₽"
+		}
+	],
+	"products": [
+		{
+			"labels": [
+				"label-hit"
+			],
+			"image": "images/products/product1.jpg",
+			"name": "Пицца из половинок",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "от 325 ₽",
+			"addButton": "Собрать пиццу 2 в 1"
+		},
+		{
+			"labels": [
+				"label-hit",
+				"label-new"
+			],
+			"image": "images/products/product2.jpg",
+			"isFavourite": true,
+			"name": "Груша с горгондзолой",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-new",
+				"label-vegan"
+			],
+			"image": "images/products/product3.jpg",
+			"name": "Итальянская",
+			"currentIngredients": 234,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "от 325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-spicy"
+			],
+			"image": "images/products/product4.jpg",
+			"name": "Пицца Чизбургер",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "565 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-hit"
+			],
+			"image": "images/products/product5.jpg",
+			"name": "Пепперони",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "от 325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-hit"
+			],
+			"image": "images/products/product6.jpg",
+			"name": "Вегетарианская",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "1025 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-hit",
+				"label-vegan"
+			],
+			"image": "images/products/product7.jpg",
+			"name": "Четыре сезона",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"image": "images/products/product8.jpg",
+			"name": "Бургер «Блю Чиз»",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Белая булка",
+				"Цельнозерн."
+			],
+			"sizeOptions": [
+				"med. rare",
+				"medium",
+				"med. well"
+			],
+			"price": "325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-hit"
+			],
+			"image": "images/products/product1.jpg",
+			"name": "Пицца из половинок",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "от 325 ₽",
+			"addButton": "Собрать пиццу 2 в 1"
+		},
+		{
+			"labels": [
+				"label-hit",
+				"label-new"
+			],
+			"image": "images/products/product2.jpg",
+			"name": "Груша с горгондзолой",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-new",
+				"label-vegan"
+			],
+			"image": "images/products/product3.jpg",
+			"name": "Итальянская",
+			"currentIngredients": 234,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "от 325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-spicy"
+			],
+			"image": "images/products/product4.jpg",
+			"name": "Пицца Чизбургер",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "565 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-hit"
+			],
+			"image": "images/products/product5.jpg",
+			"name": "Пепперони",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "от 325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-hit"
+			],
+			"image": "images/products/product6.jpg",
+			"name": "Вегетарианская",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "1025 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-hit",
+				"label-vegan"
+			],
+			"image": "images/products/product7.jpg",
+			"name": "Четыре сезона",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"image": "images/products/product8.jpg",
+			"name": "Бургер «Блю Чиз»",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Белая булка",
+				"Цельнозерн."
+			],
+			"sizeOptions": [
+				"med. rare",
+				"medium",
+				"med. well"
+			],
+			"price": "325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-new",
+				"label-vegan"
+			],
+			"image": "images/products/product3.jpg",
+			"name": "Итальянская",
+			"currentIngredients": 234,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "от 325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"labels": [
+				"label-spicy"
+			],
+			"image": "images/products/product4.jpg",
+			"name": "Пицца Чизбургер",
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "565 ₽",
+			"addButton": "Добавить в корзину"
+		}
+	],
+	"testimonials": [
+		{
+			"name": "Антон",
+			"date": "18.05.2020",
+			"rating": 5,
+			"text": "Привезли очень быстро. Пицца настолько была горячая, будто приготовили и сразу же отдали. С ингридиентами все отлично. Поменял додо пиццу на вас!",
+			"toggle": "Смотреть ответ от DONGIO"
+		},
+		{
+			"name": "Лилия",
+			"date": "23.06.2020",
+			"rating": 2,
+			"text": "Заказ ждали почти 2 часа.",
+			"toggle": "Скрыть ответ от DONGIO",
+			"answer": true
+		},
+		{
+			"name": "Макс",
+			"date": "18.05.2020",
+			"rating": 5,
+			"text": "Заказывал через приложение пиццу, получилось по акции 1+1. Понравилось скорость обрати заказа - обратная связь на высоте! Вовремя подготовили мой заказ, это также плюс!",
+			"more": true,
+			"toggle": "Смотреть ответ от DONGIO"
+		}
+	]
+}

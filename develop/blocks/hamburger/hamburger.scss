@@ -1,0 +1,44 @@
+.hamburger {
+    $this: &;
+    position: relative;
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    &.active {
+        #{$this}__line {
+            &:nth-child(2) {
+                transform: scaleX(0);
+                opacity: 0;
+            }
+
+            &:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+    }
+
+    &__line {
+        width: 20px;
+        height: 2.2px;
+        background-color: $text-color;
+        display: block;
+        margin: 0 auto 5px;
+
+        transition: all 200ms ease;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

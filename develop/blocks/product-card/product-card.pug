@@ -1,0 +1,38 @@
+mixin product-card(data)
+    +b.ARTICLE.product-card
+        +e.header
+            if (data.labels)
+                +e.labels
+                    each label in data.labels
+                        +e.label
+                            +icon(label, 'fill')
+            +e.A.image(href='#')
+                img(src=data.image, alt=data.name)
+            +e.BUTTON.favourite(class=data.isFavourite ? 'active' : '')
+                +icon('favourites')
+            +e.description
+               | Соус бешамель, сыр моцарелла, груша конференц, горгонзола 
+        +e.body
+            +e.A.name(href='#') !{data.name}
+            +e.ingredients
+                .label Ингредиенты:
+                .current + !{data.currentIngredients} ₽ 
+                button.trigger(type='button' title='Выбрать дополнительные ингрудиенты ') добавить
+                .list
+                    +ingredients
+            +e.options
+                +e.options-row
+                    each option, index in data.typeOptions
+                        +e.option
+                            input(type='radio' id='product_type' + data.index + index name='type' + data.index value='type' + data.index + index checked=index===0 ? '' : false)
+                            label(for='product_type' + data.index + index) !{option}
+                +e.options-row
+                    each option, index in data.sizeOptions
+                        +e.option
+                            input(type='radio' id='product_size' + data.index + index name='size' + data.index value='size' + data.index + index checked=index===0 ? '' : false)
+                            label(for='product_size' + data.index + index) !{option}
+        +e.footer
+            +e.counter
+                +counter
+            +e.price !{data.price}
+        +e.BUTTON.add(type='button') !{data.addButton}

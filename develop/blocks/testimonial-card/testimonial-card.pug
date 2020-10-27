@@ -1,0 +1,24 @@
+mixin testimonial-card(data)
+    +b.SECTION.testimonial-card
+        +e.body
+            +e.header
+                +e.name !{data.name}
+                +e.TIME.date(datetime="2020-12-20") !{data.date}
+                +e.rating(data-rating=data.rating)
+                    include ../../../app/images/svg/stars.svg
+            +e.text
+                p !{data.text}
+                    if (data.more)
+                        +e.A.more(href='#') ... развернуть отзыв
+            +e.BUTTON.toggle(type='button') !{data.toggle}
+        if (data.answer)
+            +e.answer
+                +e.header
+                    +e.name DONGIO
+                    +e.TIME.date(datetime="2020-12-20") 23.06.2020
+                    +e.verified
+                        +icon('check')
+                +e.text
+                    p 
+                        | Добрый день, сожалеем что так вышло, к сожалению дорожная ситуация в центре нас крайне подвела :(<br>
+                        | В качестве извенений можем вам предложить пиццу «Маргарита» 25 см бесплатно со следующим заказом, просто укажите это в комментариях!

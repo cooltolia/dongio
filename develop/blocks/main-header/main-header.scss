@@ -1,0 +1,336 @@
+.main-header {
+    &__top {
+        position: relative;
+        @include container;
+        padding-top: 28px;
+        padding-bottom: 14px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 160px;
+        height: 62px;
+        flex: 0 0 auto;
+        margin-right: 30px;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__contacts {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 6px;
+
+        text-align: center;
+    }
+
+    &__worktime {
+        margin-bottom: 10px;
+
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    &__call-appeal {
+        @include btn-reset;
+        display: block;
+        margin-bottom: 4px;
+
+        font-size: 12px;
+        line-height: 1.2;
+        color: $text-color-light;
+        cursor: pointer;
+
+        @include link-states;
+    }
+
+    &__call-phone {
+        color: $text-color;
+        font-size: 26px;
+        line-height: 1;
+        text-decoration: none;
+
+        @include link-states;
+    }
+
+    &__menu {
+        margin-left: auto;
+        margin-right: 26px;
+    }
+
+    &__menu-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__menu-item {
+        margin: 0 0 4px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__menu-link {
+        color: $text-color;
+        font-size: 14px;
+        line-height: 1.6;
+        text-decoration: none;
+
+        @include link-states;
+    }
+
+    &__mobile-menu,
+    &__hamburger {
+        display: none;
+    }
+
+    &__cart {
+        &--mobile {
+            display: none;
+        }
+    }
+
+    &__bottom {
+        border-top: 1px solid $grey;
+    }
+
+    &__bottom-row {
+        @include container;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__categories-list {
+        padding: 0;
+        margin: 0 -20px;
+        list-style: none;
+        display: flex;
+    }
+
+    &__category {
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__category-link {
+        position: relative;
+        display: block;
+        padding: 4px 20px;
+
+        font-size: 16px;
+        font-weight: 600;
+        color: $text-color;
+        text-decoration: none;
+
+        transition: color 300ms ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 20px;
+            right: 20px;
+            bottom: 0px;
+            transform: scaleX(0);
+            transform-origin: center;
+
+            background-color: currentColor;
+
+            transition: transform 300ms ease;
+        }
+
+        &:hover {
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+
+        &:active,
+        &.current {
+            color: $theme-color-dark;
+
+            &::after {
+                transform: scaleX(0);
+            }
+        }
+    }
+
+    &__favourites {
+        position: relative;
+        padding-left: 24px;
+        margin-right: 52px;
+        margin-left: auto;
+
+        color: $text-color;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.6;
+        text-decoration: none;
+
+        @include link-states;
+
+        svg {
+            position: absolute;
+            width: 18px;
+            height: 16px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2px;
+        }
+    }
+}
+
+@media #{$tablet} {
+    .main-header {
+        &__top {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        &__logo {
+            width: 78px;
+            height: 32px;
+        }
+
+        &__delivery,
+        &__contacts,
+        &__menu,
+        &__account,
+        &__favourites {
+            display: none;
+        }
+
+        &__cart {
+            display: none;
+
+            &--mobile {
+                display: block;
+                margin-left: auto;
+                margin-right: 20px;
+            }
+        }
+
+        &__hamburger {
+            display: block;
+        }
+
+        &__bottom {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        &__mobile-menu {
+            display: block;
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            padding-top: 67px;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+    }
+}
+
+@media #{$mobile} {
+    .main-header {
+        &__bottom {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        &__bottom-row {
+            padding: 0;
+        }
+
+        &__categories {
+            width: 100%;
+            position: relative;
+
+            &.scroll-start {
+                &::before {
+                    opacity: 0;
+                }
+            }
+
+            &.scroll-finish {
+                &::after {
+                    opacity: 0;
+                }
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                width: 60px;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+                opacity: 1;
+                pointer-events: none;
+
+                transition: opacity 300ms ease;
+
+                background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+            }
+
+            &::after {
+                right: 0;
+                left: auto;
+
+                background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+            }
+        }
+
+        &__categories-list {
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            overflow: auto;
+            width: 100%;
+            margin: 0;
+            padding: 0 10px;
+
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        &__category {
+            padding: 0 10px;
+            &:last-child {
+                padding-right: 20px;
+            }
+        }
+
+        &__category-link {
+            padding: 0;
+            font-size: 14px;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

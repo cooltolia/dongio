@@ -1,0 +1,13 @@
+mixin main-hero()
+    +b.SECTION.main-hero
+        +e.slider
+            +e.slides
+                +e.slide
+                    +picture-helper({desktop: 'images/main-hero/slide1.jpg', tablet: 'images/main-hero/slide1.jpg', mobile: 'images/main-hero/slide1_mobile.jpg'})
+            +e.UL.dots
+                +e.LI.dot.active
+                    button(type='button')
+                +e.LI.dot
+                    button(type='button')
+                +e.LI.dot
+                    button(type='button')

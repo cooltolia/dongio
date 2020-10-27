@@ -1,0 +1,202 @@
+.about {
+    margin-bottom: 70px;
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-end;
+        max-width: 1080px;
+    }
+
+    &__video {
+        width: 540px;
+        flex: 0 0 auto;
+        @include aspect-ratio(16, 9);
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            object-fit: cover;
+        }
+    }
+
+    &__play {
+        @include btn-reset;
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        svg {
+            @include svg-icon;
+
+            fill: none;
+
+            circle,
+            path {
+                fill: transparent;
+
+                transition: fill 300ms ease, stroke, 300ms ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                circle {
+                    fill: $theme-color;
+                    stroke: $theme-color;
+                }
+
+                path {
+                    fill: $text-color-white;
+                }
+            }
+        }
+
+        &:active {
+            svg {
+                circle {
+                    fill: $theme-color-dark;
+                    stroke: $theme-color-dark;
+                }
+
+                path {
+                    fill: $text-color-white;
+                }
+            }
+        }
+    }
+
+    &__content {
+        width: 50%;
+        padding-left: 30px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+
+        font-size: 16px;
+        line-height: 1.6;
+
+        p {
+            margin: 0 0 12px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__advantages {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__advantage {
+        width: 45%;
+        display: flex;
+        align-items: center;
+
+        .icon {
+            position: relative;
+            width: 65px;
+            height: 65px;
+            flex: 0 0 auto;
+            margin-right: 10px;
+
+            img {
+                @include img;
+            }
+        }
+
+        .label {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+    }
+}
+
+@media #{$laptop} {
+    .about {
+        &__video {
+            width: 400px;
+        }
+
+        &__content {
+            width: auto;
+        }
+    }
+}
+@media #{$tablet} {
+    .about {
+        &__wrapper {
+            align-items: flex-start;
+        }
+
+        &__video {
+            width: 300px;
+        }
+
+        &__advantages {
+            display: block;
+        }
+
+        &__advantage {
+            width: 100%;
+            margin: 0 0 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media #{$mobile} {
+    .about {
+        margin-bottom: 40px;
+
+        &__wrapper {
+            display: block;
+        }
+
+        &__video {
+            width: 100%;
+            max-width: 360px;
+            margin-bottom: 10px;
+
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        &__content {
+            padding-left: 0;
+        }
+
+        &__text {
+            margin-bottom: 20px;
+        }
+
+        &__advantage {
+            .icon {
+                width: 55px;
+                height: 55px;
+                margin-right: 20px;
+            }
+
+            .label {
+                font-size: 14px;
+            }
+        }
+    }
+}

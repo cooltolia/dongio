@@ -1,0 +1,20 @@
+mixin testimonials()
+    +b.SECTION.testimonials
+        +inner
+            +e.header
+                +e.title
+                    +title
+                        | Спасибо, что делитесь своим опытом, ведь&nbsp;только так, мы становимся лучше!
+                +e.controls
+                    +e.BUTTON.control.prev(type='button' title='Назад')
+                    +e.progress
+                        span.current 1 
+                        |  
+                        | /
+                        | 
+                        span.total 9
+                    +e.BUTTON.control.next(type='button' title='Вперед')
+            +e.slider
+                each testimonial in testimonials
+                    +e.slide
+                        +testimonial-card(testimonial)

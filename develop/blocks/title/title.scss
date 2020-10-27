@@ -1,0 +1,27 @@
+.title {
+    position: relative;
+    display: block;
+    margin: 0;
+
+    font-family: $font-second;
+    color: $text-color;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-transform: uppercase;
+
+    &.light {
+        color: #fff;
+    }
+}
+
+@media #{$tablet} {
+    .title {
+    }
+}
+
+@media #{$mobile} {
+    .title {
+        font-size: 18px;
+    }
+}

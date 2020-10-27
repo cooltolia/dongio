@@ -1,0 +1,48 @@
+@import 'includes/normalize.scss';
+@import 'includes/fonts.scss';
+@import 'variables.scss';
+@import 'modal.scss';
+@import '../blocks/**/*';
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    min-width: 320px;
+
+    font-family: $font;
+    color: $text-color;
+    font-weight: 500;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    &.menu-opened,
+    &.modal-opened {
+        overflow: hidden;
+    }
+}
+
+a {
+    color: $text-color;
+    text-decoration: underline;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    pointer-events: none;
+    z-index: -1;
+
+    &.active {
+        pointer-events: all;
+        z-index: 1;
+    }
+}

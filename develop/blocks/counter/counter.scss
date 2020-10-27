@@ -1,0 +1,104 @@
+.counter {
+    width: 65px;
+    height: 25px;
+    padding: 2px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid $grey;
+    border-radius: 4px;
+
+    &.small {
+        width: 50px;
+        height: 19px;
+        padding: 1px;
+
+        .counter__control {
+            width: 15px;
+            height: 15px;
+        }
+
+        .counter__current {
+            font-size: 12px;
+        }
+    }
+
+    &__control {
+        @include btn-reset;
+        position: relative;
+        width: 19px;
+        height: 19px;
+        flex: 0 0 auto;
+
+        background-color: $grey;
+        border-radius: 4px;
+
+        transition: background-color 300ms ease;
+
+        &:hover {
+            background-color: $theme-color;
+
+            &::before,
+            &::after {
+                background-color: $text-color-white;
+            }
+        }
+
+        &:active {
+            background-color: $theme-color-dark;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 1px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            border-radius: 1px;
+            background-color: $text-color;
+
+            transition: background-color 300ms ease;
+        }
+
+        &--plus {
+            &::after {
+                transform: translate(-50%, -50%) rotate(-90deg);
+            }
+        }
+    }
+
+    &__current {
+        width: 100%;
+        flex: 1 1 auto;
+        text-align: center;
+
+        border: none;
+
+        font-size: 14px;
+    }
+}
+
+@media #{$tablet} {
+    .counter {
+    }
+}
+
+@media #{$mobile} {
+    .counter {
+        &.small {
+            width: 55px;
+            height: 22px;
+            padding: 2px;
+        }
+
+        .counter__control {
+            width: 17px;
+            height: 17px;
+        }
+    }
+}

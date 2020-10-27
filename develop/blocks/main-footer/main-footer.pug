@@ -1,0 +1,44 @@
+mixin main-footer(logo = 'main')
+    +b.FOOTER.main-footer
+        +inner
+            +e.A.logo.--tablet(href='./')
+                    img(src='images/' + logo + '-logo.svg', alt='')
+            +e.wrapper
+                +e.info
+                    +e.A.logo(href='./')
+                        img(src='images/' + logo + '-logo.svg', alt='')
+                    +e.links
+                        +e.A.link(href='#') Лицензии на осуществление медицинской деятельности
+                        +e.A.link(href='#') Политика обработки персональных данных
+                        +e.A.link.--highlight(href='#') СОУТ
+                        +e.SPAN.link «Медика» – Партнер <a href='Doctu.ru' target='_blank' rel='noopener'>Doctu.ru</a>
+                    +e.socials
+                        +socials
+                +e.NAV.first-menu
+                    +e.menu-col
+                        +e.menu-title !{footerMenu.list1[0].label}
+                        +e.UL.menu-list 
+                            each item in footerMenu.list1[0].innerMenu
+                                +e.LI.menu-item
+                                    +e.A.menu-link.--secondary(href='#') !{item}
+                    +e.menu-col
+                        +e.menu-title !{footerMenu.list1[1].label}
+                        +e.UL.menu-list 
+                            each item in footerMenu.list1[1].innerMenu
+                                +e.LI.menu-item
+                                    +e.A.menu-link.--secondary(href='#') !{item}
+                +e.NAV.second-menu
+                    +e.menu-col
+                        +e.UL.menu-list
+                            each item in footerMenu.list2
+                                +e.LI.menu-item
+                                    +e.A.menu-link(href='#') !{item.label}
+                    +e.menu-col
+                        +e.UL.menu-list
+                            each item in footerMenu.list3
+                                +e.LI.menu-item
+                                    +e.A.menu-link(href='#') !{item.label}
+            +e.bottom
+                +e.legal ООО «Медика» Система медицинских центров экспертного уровня
+                +e.A.developer(href='https://zumpunkt.ru/' target='_blank' rel='noopener') Разрабокта сайта — <span>Zum Punkt</span>
+    +fixed-footer

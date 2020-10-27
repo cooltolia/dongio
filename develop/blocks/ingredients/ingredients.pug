@@ -1,0 +1,19 @@
+mixin ingredients()
+    +b.ingredients
+        +e.backdrop
+        +e.content
+            +e.header
+                +e.title 
+                    +title('div') 
+                        | Добавить ингридиенты
+                +e.BUTTON.close(type='button')
+                    +icon('close')
+            +e.body
+                each ingredient in ingredients
+                    +e.row
+                        +e.name !{ingredient.name}
+                        +e.price !{ingredient.price}
+                        +e.counter
+                            +counter('small')
+            +e.footer
+                +e.BUTTON.submit(type='button') Применить и закрыть
