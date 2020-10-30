@@ -1,0 +1,17 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+
+- const favouritesPage = true
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +breadcrumbs(['Избранное'])
+        -const productsList = products.filter((item, index) => {if (index < 3) {item.index = index; item.isFavourite = true; return item}})
+        +catalog('Избранное', false, productsList)
+        +main-footer
+        +doc-footer

@@ -1,7 +1,7 @@
 mixin main-header()
     +b.HEADER.main-header
         +e.top
-            +e.A.logo(href='#' title='Dongio Pizza')
+            +e.A.logo(href='./' title='Dongio Pizza')
                 img(src='images/logo.svg', alt='Dongio Pizza')
             +e.delivery
                 +delivery-info
@@ -38,7 +38,7 @@ mixin main-header()
                             +e.A.category-link(href='#') Салаты
                         +e.LI.category
                             +e.A.category-link(href='#') Напитки
-                +e.A.favourites(href='#')
+                +e.A.favourites(href='#' class=favouritesPage ? 'current' : '')
                     +icon('favourites')
                     | Избранное
                 +e.cart

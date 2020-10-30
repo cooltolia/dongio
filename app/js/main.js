@@ -1116,6 +1116,18 @@ function globalInitFunction() {
   }();
 
   (function () {
+    var catalogFilter = document.querySelector('.catalog-filter');
+    if (!catalogFilter) return;
+    var ingredientsTrigger = document.querySelector('.catalog-filter__ingredients-trigger');
+    var ingredientsModal = document.querySelector('.catalog-filter__ingredients-modal');
+    ingredientsTrigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      ingredientsTrigger.classList.toggle('active');
+      ingredientsModal.classList.toggle('active');
+    });
+  })();
+
+  (function () {
     /** demo purpose only */
     var catalog = document.querySelector('.catalog');
     if (!catalog) return;

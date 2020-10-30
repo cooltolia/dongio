@@ -6,6 +6,7 @@ mixin catalog(title = '', hasFilter = false, products)
                     | !{title}
             if (hasFilter)
                 +e.filter
+                    +catalog-filter
             +e.list
                 each product in products
                     +e.card

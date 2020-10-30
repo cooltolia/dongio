@@ -1,6 +1,7 @@
 .breadcrumbs {
     position: relative;
     width: 100%;
+    padding-top: 30px;
 
     &__list {
         padding: 0;
@@ -12,7 +13,7 @@
 
     &__item {
         position: relative;
-        margin-right: 40px;
+        margin-right: 20px;
         margin-bottom: 8px;
 
         &:last-child {
@@ -22,22 +23,22 @@
                 display: none;
             }
 
-            // .breadcrumbs__link::after {
-            //     display: none;
-            // }
+            .breadcrumbs__link::after {
+                display: none;
+            }
         }
 
         &::after {
             content: '';
             position: absolute;
-            width: 6px;
-            height: 6px;
-            right: -23px;
+            width: 5px;
+            height: 5px;
+            right: -12px;
             top: 50%;
             transform: translateY(-50%) rotate(-45deg);
             border-width: 0 2px 2px 0;
             border-style: solid;
-            border-color: currentColor;
+            border-color: $text-color-light;
             border-radius: 2px;
         }
     }
@@ -47,18 +48,15 @@
         display: block;
         width: 100%;
 
-        color: $text-color;
-        font-size: 16px;
-        font-weight: 700;
-        text-decoration: underline;
+        color: $text-color-light;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
 
-        transition: opacity 300ms ease;
+        transition: color 300ms ease;
 
-        &:hover,
-        &:active,
-        &:focus {
-            opacity: 0.6;
-            text-decoration: underline;
+        &:hover {
+            color: $theme-color;
         }
     }
 }

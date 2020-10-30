@@ -1,0 +1,16 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+- const filterIngredients = 2
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +breadcrumbs(['Пиццы'])
+        -const productsList = products.filter((item, index) => {if (index < 6) {item.index = index; return item}})
+        +catalog('Пиццы', true, productsList)
+        +main-footer
+        +doc-footer

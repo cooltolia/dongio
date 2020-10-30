@@ -4,7 +4,7 @@ mixin mobile-menu()
             +e.inner
                 +e.account
                     +account-trigger
-                +e.A.favourites
+                +e.A.favourites(class=favouritesPage ? 'current' : '')
                     +icon('favourites')
                     | Избранное
                 +e.NAV.menu

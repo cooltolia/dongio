@@ -97,6 +97,15 @@
         font-size: 12px;
         text-decoration: none;
         color: $text-color-light;
+        transition: color 300ms ease;
+
+        &:hover {
+            color: $theme-color;
+        }
+
+        &:active {
+            color: $theme-color-dark;
+        }
     }
 
     &__toggle {

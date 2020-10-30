@@ -3,7 +3,7 @@ mixin breadcrumbs(links)
         +inner
             +e.UL.list
                 +e.LI.item
-                    +e.A.link(href='../' title='Главная') Главная
+                    +e.A.link(href='./' title='Главная') Главная
                 each link in links
                     +e.LI.item
                         +e.A.link(href='#') !{link}

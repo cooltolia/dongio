@@ -5,6 +5,11 @@
         margin-bottom: 40px;
     }
 
+    &__filter {
+        margin-bottom: 50px;
+        margin-top: -20px;
+    }
+
     &__list {
         display: flex;
         flex-flow: row wrap;
@@ -48,8 +53,12 @@
             margin-bottom: 20px;
         }
 
+        &__filter {
+            margin-top: 0;
+        }
+
         &__card {
             width: 100%;
-        }
+        }   
     }
 }

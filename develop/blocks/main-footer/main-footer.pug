@@ -1,44 +1,46 @@
-mixin main-footer(logo = 'main')
+mixin main-footer()
     +b.FOOTER.main-footer
-        +inner
-            +e.A.logo.--tablet(href='./')
-                    img(src='images/' + logo + '-logo.svg', alt='')
-            +e.wrapper
+        +e.top
+            +e.column
+                +e.title Контакты
                 +e.info
-                    +e.A.logo(href='./')
-                        img(src='images/' + logo + '-logo.svg', alt='')
-                    +e.links
-                        +e.A.link(href='#') Лицензии на осуществление медицинской деятельности
-                        +e.A.link(href='#') Политика обработки персональных данных
-                        +e.A.link.--highlight(href='#') СОУТ
-                        +e.SPAN.link «Медика» – Партнер <a href='Doctu.ru' target='_blank' rel='noopener'>Doctu.ru</a>
-                    +e.socials
-                        +socials
-                +e.NAV.first-menu
-                    +e.menu-col
-                        +e.menu-title !{footerMenu.list1[0].label}
-                        +e.UL.menu-list 
-                            each item in footerMenu.list1[0].innerMenu
-                                +e.LI.menu-item
-                                    +e.A.menu-link.--secondary(href='#') !{item}
-                    +e.menu-col
-                        +e.menu-title !{footerMenu.list1[1].label}
-                        +e.UL.menu-list 
-                            each item in footerMenu.list1[1].innerMenu
-                                +e.LI.menu-item
-                                    +e.A.menu-link.--secondary(href='#') !{item}
-                +e.NAV.second-menu
-                    +e.menu-col
-                        +e.UL.menu-list
-                            each item in footerMenu.list2
-                                +e.LI.menu-item
-                                    +e.A.menu-link(href='#') !{item.label}
-                    +e.menu-col
-                        +e.UL.menu-list
-                            each item in footerMenu.list3
-                                +e.LI.menu-item
-                                    +e.A.menu-link(href='#') !{item.label}
-            +e.bottom
-                +e.legal ООО «Медика» Система медицинских центров экспертного уровня
-                +e.A.developer(href='https://zumpunkt.ru/' target='_blank' rel='noopener') Разрабокта сайта — <span>Zum Punkt</span>
-    +fixed-footer
+                    +icon('phone')
+                    a(href='tel:204-54-14') 204 - 54 - 14
+                +e.info
+                    +icon('pointer')
+                    | Олимпийский Бульвар, д.&nbsp;6
+                +e.info
+                    +icon('mail')
+                    a(href='mailto:support@dongio.com') support@dongio.com
+            +e.column
+                +e.title Мы в соцсетях
+                +e.info
+                    +icon('vk')
+                    a(href='#') ВКонтакте
+                +e.info
+                    +icon('facebook')
+                    a(href='#') Facebook
+                +e.info
+                    +icon('instagram')
+                    a(href='#') Instagram
+            +e.NAV.menu.__column
+                +e.UL.menu-list
+                    +e.LI.menu-item
+                        +e.A.menu-link(href='#') Доставка и оплата
+                    +e.LI.menu-item
+                        +e.A.menu-link(href='#') Акции и бонусы
+                    +e.LI.menu-item
+                        +e.A.menu-link(href='#') Наша команда и кафе
+                    +e.LI.menu-item
+                        +e.A.menu-link(href='#') Работа в DONGIO
+                    +e.LI.menu-item
+                        +e.A.menu-link(href='#') Поставщикам
+                    +e.LI.menu-item
+                        +e.A.menu-link(href='#') Корпоративные заказы
+        +e.bottom
+            +e.bottom-row
+                +e.legal
+                    a(href='#' target='_blank') Политика конфиденциальности
+                    a(href='#' target='_blank') Публичная офферта
+                    a(href='#' target='_blank') © FoodSoul, 2020
+                +e.developer Разработано в <a href='#' target='_blank'>Plenexy</a>

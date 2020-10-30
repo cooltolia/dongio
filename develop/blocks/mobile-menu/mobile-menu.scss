@@ -37,6 +37,7 @@
 
     &__favourites {
         position: relative;
+        align-self: flex-start;
         margin-bottom: 16px;
         padding-left: 24px;
 
@@ -46,7 +47,9 @@
         line-height: 1.6;
         text-decoration: none;
 
-        @include link-states;
+        &:not(.current) {
+            @include link-states;
+        }
 
         svg {
             position: absolute;
@@ -59,6 +62,25 @@
             fill: none;
             stroke: currentColor;
             stroke-width: 2px;
+        }
+
+        &.current {
+            color: $theme-color-dark;
+
+            svg {
+                fill: currentColor;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                right: 0px;
+                height: 2px;
+
+                background-color: currentColor;
+            }
         }
     }
     &__contacts {

@@ -1,0 +1,46 @@
+mixin catalog-filter()
+    +b.catalog-filter
+        +e.section
+            +e.title Сортировать по :
+            +e.sort
+                +e.sort-trigger.selected(data-sort='descended')
+                    .label Цене
+                    .icon
+                        +icon('arrow-path')
+                +e.sort-trigger
+                    .label Популярности
+                    .icon
+                        +icon('arrow-path')
+        +e.section
+            +e.title Фильтр по :
+            +e.types
+                +e.BUTTON.type(type='button')
+                    +icon('label-hit', 'fill')
+                +e.BUTTON.type(type='button')
+                    +icon('label-new', 'fill')
+                +e.BUTTON.type(type='button')
+                    +icon('label-vegan', 'fill')
+                +e.BUTTON.type(type='button')
+                    +icon('label-spicy', 'fill')
+        +e.section
+            +e.ingredients
+                if (filterIngredients)
+                    +e.ingredients-title Ингредиентам:  
+                        span 2
+                else
+                    +e.ingredients-title Ингредиентам
+                +e.BUTTON.ingredients-trigger(type='button')
+                +e.ingredients-modal
+                    .list
+                        each item, index in ingredients
+                            .item  
+                                button.like(type='button' class=index===1 ? 'active' : '')
+                                    +icon('favourites')
+                                button.dislike(type='button' class=index===9 ? 'active' : '')
+                                    +icon('dislike', 'fill', 'rest')
+                                    +icon('dislike-active', 'fill', 'active')
+                                .label !{item.name}
+                    .actions
+                        button.reset(type='button') Очистить
+                        button.submit(type='button') Применить
+

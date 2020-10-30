@@ -4,6 +4,18 @@
             {
                 "link": "main-page.html",
                 "text": "Главная страница"
+            },
+            {
+                "link": "catalog-page.html",
+                "text": "Каталог"
+            },
+            {
+                "link": "catalog-page-1.html",
+                "text": "Каталог (c ингредиентами)"
+            },
+            {
+                "link": "favourites-page.html",
+                "text": "Избранное"
             }
         ]
     }
