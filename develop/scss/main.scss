@@ -1,7 +1,6 @@
 @import 'includes/normalize.scss';
 @import 'includes/fonts.scss';
 @import 'variables.scss';
-@import 'modal.scss';
 @import '../blocks/**/*';
 
 html {
@@ -25,24 +24,31 @@ body {
     }
 }
 
-a {
-    color: $text-color;
-    text-decoration: underline;
-}
-
-
-.modal-overlay {
+/*
+    TODO remove this code on prod
+    demo purpose only
+*/
+.modal {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+    padding: 50px 0;
 
-    pointer-events: none;
-    z-index: -1;
+    overflow-y: auto;
 
-    &.active {
-        pointer-events: all;
-        z-index: 1;
+    background-color: rgba(#000, 0.8);
+
+    .modal-inner {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media #{$mobile} {
+        padding-bottom: 0;
     }
 }

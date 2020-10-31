@@ -18,6 +18,18 @@
                 "text": "Страница товара"
             },
             {
+                "link": "halves-page.html",
+                "text": "Модалка 2 в 1"
+            },
+            {
+                "link": "halves-page-1.html",
+                "text": "Модалка 2 в 1 (выбор пиццы)"
+            },
+            {
+                "link": "halves-page-2.html",
+                "text": "Модалка 2 в 1 (выбор ингредиентов)"
+            },
+            {
                 "link": "favourites-page.html",
                 "text": "Избранное"
             }

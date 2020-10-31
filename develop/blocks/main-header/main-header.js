@@ -1,6 +1,8 @@
 (function () {
     /** just a small code for mobile categories scroll */
     const nav = document.querySelector('.main-header__categories');
+    if (!nav) return;
+    
     const list = nav.querySelector('.main-header__categories-list');
 
     const listWidth = list.scrollWidth;

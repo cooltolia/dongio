@@ -1,0 +1,15 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+
+- const showHalvesDropdown = true
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body(сlass='modal-opened')
+        .modal
+            .modal-inner
+                +halves-modal
+        +doc-footer

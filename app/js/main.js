@@ -1157,6 +1157,7 @@ function globalInitFunction() {
   (function () {
     var hamburger = document.querySelector('.hamburger');
     var mobileMenu = document.querySelector('.mobile-menu');
+    if (!hamburger) return;
     hamburger.addEventListener('click', function () {
       hamburger.classList.toggle('active');
       mobileMenu.classList.toggle('opened');
@@ -1171,6 +1172,7 @@ function globalInitFunction() {
   (function () {
     /** just a small code for mobile categories scroll */
     var nav = document.querySelector('.main-header__categories');
+    if (!nav) return;
     var list = nav.querySelector('.main-header__categories-list');
     var listWidth = list.scrollWidth;
     var navWidth = nav.offsetWidth;

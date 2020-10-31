@@ -1,0 +1,122 @@
+mixin halves-modal()
+    +b.halves-modal
+        +e.BUTTON.close
+            +icon('close')
+        +e.header
+            +e.title
+                +title
+                    | Собрать пиццу 2в1
+            +e.types
+                +e.type
+                    input(type='radio' id='product_type1' name='type' value='type1' checked='')
+                    label(for='product_type1') Стандартное
+                +e.type
+                    input(type='radio' id='product_type2' name='type' value='type2')
+                    label(for='product_type2') Тонкое
+        +e.body
+            +e.half
+                +e.half-title Левая половинка
+                +e.half-select
+                    button(class=showHalvesDropdown ? 'active' : '') Груша с горгондзолой - 325 ₽
+                    if (showHalvesDropdown)
+                        .dropdown
+                            .item
+                                .image
+                                    img(src='images/products/product2.jpg', alt='')
+                                .data
+                                    .name Груша с горгондзолой - 325 ₽ 
+                                    .contents Соус бешамель, сыр моцарелла, груша конференц, горгонзола
+                            .item
+                                .image
+                                    img(src='images/products/product3.jpg', alt='')
+                                .data
+                                    .name Итальянская - 325 ₽ 
+                                    .contents Пицца соус, сыр моцарелла, пепперони, маслины, шампиньоны, руккола
+                            .item
+                                .image
+                                    img(src='images/products/product4.jpg', alt='')
+                                .data
+                                    .name Пицца Чизбургер - 325 ₽
+                                    .contents Соус бешамель, сыр моцарелла, говядина, бекон, американский сыр, красный лук, томаты, соленые огурчики
+                            .item
+                                .image
+                                    img(src='images/products/product5.jpg', alt='')
+                                .data
+                                    .name Пепперони - 325 ₽
+                                    .contents Пицца соус, сыр моцарелла, пепперони
+                            .item
+                                .image
+                                    img(src='images/products/product2.jpg', alt='')
+                                .data
+                                    .name Груша с горгондзолой - 325 ₽ 
+                                    .contents Соус бешамель, сыр моцарелла, груша конференц, горгонзола
+                            .item
+                                .image
+                                    img(src='images/products/product3.jpg', alt='')
+                                .data
+                                    .name Итальянская - 325 ₽ 
+                                    .contents Пицца соус, сыр моцарелла, пепперони, маслины, шампиньоны, руккола
+                            .item
+                                .image
+                                    img(src='images/products/product4.jpg', alt='')
+                                .data
+                                    .name Пицца Чизбургер - 325 ₽
+                                    .contents Соус бешамель, сыр моцарелла, говядина, бекон, американский сыр, красный лук, томаты, соленые огурчики
+                            .item
+                                .image
+                                    img(src='images/products/product5.jpg', alt='')
+                                .data
+                                    .name Пепперони - 325 ₽
+                                    .contents Пицца соус, сыр моцарелла, пепперони
+                +e.product
+                    +e.product-header
+                        +e.labels
+                            +e.label
+                                +icon('label-hit', 'fill')
+                            +e.label
+                                +icon('label-new', 'fill')
+                        +e.image
+                            img(src='images/products/product2.jpg', alt='')
+                        +e.BUTTON.favourite
+                            +icon('favourites')
+                        +e.description
+                            | Соус бешамель, сыр моцарелла, груша конференц, горгонзола
+                    +e.product-body
+                        +e.name Груша с горгондзолой
+                    +e.product-ingredients(class=showIngredientsDropdown ? 'active' : '')
+                        .label Ингредиенты:
+                        .current + 0 ₽ 
+                        button.trigger(type='button' title='Выбрать дополнительные ингрудиенты' class=showIngredientsDropdown ? 'active' : '') добавить
+                        .list(class=showIngredientsDropdown ? 'active' : '')
+                            +ingredients
+            +e.half(class=showHalvesDropdown ? 'disabled' : '')
+                +e.half-title Правая половинка
+                +e.half-select
+                    button Пицца Чизбургер - 325 ₽
+                +e.product
+                    +e.product-header
+                        +e.labels
+                            +e.label
+                                +icon('label-hit', 'fill')
+                        +e.image
+                            img(src='images/products/product3.jpg', alt='')
+                        +e.BUTTON.favourite
+                            +icon('favourites')
+                        +e.description
+                            | Соус бешамель, сыр моцарелла, груша конференц, горгонзола
+                    +e.product-body
+                        +e.name Пицца Чизбургер
+                        +e.description.--mobile
+                            | Соус бешамель, сыр моцарелла, груша конференц, горгонзола
+                    +e.product-ingredients
+                        .label Ингредиенты:
+                        .current + 0 ₽ 
+                        button.trigger(type='button' title='Выбрать дополнительные ингрудиенты ') добавить
+                        .list
+                            +ingredients
+        +e.footer
+            +e.counter
+                +counter('big')
+            +e.price 650 ₽ 
+            +e.BUTTON.add(type='button') Добавить в корзину
+
