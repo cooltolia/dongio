@@ -9,7 +9,7 @@ html(lang='ru')
     body
         +main-header
         +breadcrumbs(['Пиццы'])
-        //- -const productsList = products.filter((item, index) => {if (index < 8) {item.index = index; return item}})
-        +catalog('Пиццы', true, products)
+        -const productsList = products.map((item, index) => {item.index = index; return item})
+        +catalog('Пиццы', true, productsList)
         +main-footer
         +doc-footer

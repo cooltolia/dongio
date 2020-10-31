@@ -1,5 +1,9 @@
 .product-card {
     width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
 
     &__header {
         position: relative;
@@ -294,6 +298,7 @@
     }
 
     &__footer {
+        margin-top: auto;
         margin-bottom: 10px;
         display: flex;
         justify-content: space-between;

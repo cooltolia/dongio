@@ -14,6 +14,10 @@
 				"text": "Каталог (c ингредиентами)"
 			},
 			{
+				"link": "product-page.html",
+				"text": "Страница товара"
+			},
+			{
 				"link": "favourites-page.html",
 				"text": "Избранное"
 			}
@@ -80,6 +84,8 @@
 			],
 			"image": "images/products/product1.jpg",
 			"name": "Пицца из половинок",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -101,6 +107,8 @@
 			"image": "images/products/product2.jpg",
 			"isFavourite": true,
 			"name": "Груша с горгондзолой",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -121,6 +129,8 @@
 			],
 			"image": "images/products/product3.jpg",
 			"name": "Итальянская",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 234,
 			"typeOptions": [
 				"Стандартное",
@@ -140,6 +150,8 @@
 			],
 			"image": "images/products/product4.jpg",
 			"name": "Пицца Чизбургер",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -159,6 +171,8 @@
 			],
 			"image": "images/products/product5.jpg",
 			"name": "Пепперони",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -178,6 +192,8 @@
 			],
 			"image": "images/products/product6.jpg",
 			"name": "Вегетарианская",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -198,6 +214,8 @@
 			],
 			"image": "images/products/product7.jpg",
 			"name": "Четыре сезона",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -214,6 +232,8 @@
 		{
 			"image": "images/products/product8.jpg",
 			"name": "Бургер «Блю Чиз»",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Белая булка",
@@ -233,6 +253,8 @@
 			],
 			"image": "images/products/product1.jpg",
 			"name": "Пицца из половинок",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -253,6 +275,8 @@
 			],
 			"image": "images/products/product2.jpg",
 			"name": "Груша с горгондзолой",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -273,6 +297,8 @@
 			],
 			"image": "images/products/product3.jpg",
 			"name": "Итальянская",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 234,
 			"typeOptions": [
 				"Стандартное",
@@ -292,6 +318,8 @@
 			],
 			"image": "images/products/product4.jpg",
 			"name": "Пицца Чизбургер",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -311,6 +339,8 @@
 			],
 			"image": "images/products/product5.jpg",
 			"name": "Пепперони",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -330,6 +360,8 @@
 			],
 			"image": "images/products/product6.jpg",
 			"name": "Вегетарианская",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -350,6 +382,8 @@
 			],
 			"image": "images/products/product7.jpg",
 			"name": "Четыре сезона",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -366,6 +400,8 @@
 		{
 			"image": "images/products/product8.jpg",
 			"name": "Бургер «Блю Чиз»",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Белая булка",
@@ -386,6 +422,8 @@
 			],
 			"image": "images/products/product3.jpg",
 			"name": "Итальянская",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 234,
 			"typeOptions": [
 				"Стандартное",
@@ -405,6 +443,8 @@
 			],
 			"image": "images/products/product4.jpg",
 			"name": "Пицца Чизбургер",
+			"hasIngredients": true,
+			"hasOptions": true,
 			"currentIngredients": 0,
 			"typeOptions": [
 				"Стандартное",
@@ -416,6 +456,84 @@
 				"35 см"
 			],
 			"price": "565 ₽",
+			"addButton": "Добавить в корзину"
+		}
+	],
+	"additionalProducts": [
+		{
+			"labels": [
+				"label-new",
+				"label-vegan"
+			],
+			"image": "images/products/product2.jpg",
+			"name": "Четыре сезона",
+			"hasIngredients": true,
+			"hasOptions": true,
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"image": "images/products/product9.jpg",
+			"name": "Coca - Cola",
+			"hasIngredients": false,
+			"hasOptions": true,
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Classic",
+				"Без сахара"
+			],
+			"sizeOptions": [
+				"0.33 л",
+				"1 л",
+				"2 л"
+			],
+			"price": "55 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"image": "images/products/product10.jpg",
+			"name": "Четыре сезона",
+			"hasIngredients": true,
+			"hasOptions": false,
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Стандартное",
+				"Тонкое"
+			],
+			"sizeOptions": [
+				"25 см",
+				"30 см",
+				"35 см"
+			],
+			"price": "325 ₽",
+			"addButton": "Добавить в корзину"
+		},
+		{
+			"image": "images/products/product8.jpg",
+			"name": "Бургер «Блю Чиз»",
+			"hasIngredients": true,
+			"hasOptions": true,
+			"currentIngredients": 0,
+			"typeOptions": [
+				"Белая булка",
+				"Цельнозерн."
+			],
+			"sizeOptions": [
+				"med. rare",
+				"medium",
+				"med. well"
+			],
+			"price": "325 ₽",
 			"addButton": "Добавить в корзину"
 		}
 	],

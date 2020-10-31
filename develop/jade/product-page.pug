@@ -1,0 +1,16 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +breadcrumbs(['Пиццы', 'Пицца Чизбургер'])
+        +product-section
+        -const productsList = additionalProducts.map((item, index) => {item.index = index; return item})
+        +catalog('Обычно заказывают вместе ', false, productsList)
+        +main-footer
+        +doc-footer

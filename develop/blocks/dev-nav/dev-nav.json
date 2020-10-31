@@ -14,6 +14,10 @@
                 "text": "Каталог (c ингредиентами)"
             },
             {
+                "link": "product-page.html",
+                "text": "Страница товара"
+            },
+            {
                 "link": "favourites-page.html",
                 "text": "Избранное"
             }

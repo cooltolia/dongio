@@ -1,0 +1,91 @@
+mixin product-section()
+    +b.SECTION.product-section
+        +inner
+            +e.wrapper
+                +e.aside
+                    +e.labels
+                        +e.label
+                            +icon('label-hit', 'fill')
+                        +e.label
+                            +icon('label-new', 'fill')
+                    +e.BUTTON.favourite(type='button')
+                        +icon('favourites')
+                    +e.image
+                        img(src='images/product/image1.jpg', alt='')
+                    +e.share
+                        +e.subtitle Поделиться с друзьями:
+                        +e.share-links
+                            +e.A.share-link(href='#')
+                                +icon('vk', 'fill')
+                            +e.A.share-link(href='#')
+                                +icon('facebook', 'fill')
+                            +e.A.share-link(href='#')
+                                +icon('instagram', 'fill')
+                +e.main
+                    +e.title
+                        +title('h1')
+                            | Пицца Чизбургер
+                    +e.description
+                        p Соус бешамель, сыр моцарелла, говядина, бекон, американский сыр, красный лук, томаты, соленые огурчики
+                    +e.ingredients
+                        +e.subtitle.label Ингредиенты:
+                        .current + 0 ₽ 
+                        button.trigger(type='button' title='Выбрать дополнительные ингрудиенты ') добавить
+                        .list
+                            +ingredients
+                    +e.options
+                        +e.subtitle Тесто для пиццы:
+                        +e.options-row
+                            +e.option
+                                input(type='radio' id='product_type1' name='type' value='type1' checked='')
+                                label(for='product_type1') Стандартное
+                            +e.option
+                                input(type='radio' id='product_type2' name='type' value='type2')
+                                label(for='product_type2') Тонкое
+                    +e.nutrition
+                        +e.subtitle Пищевая ценность:
+                        +e.nutrition-toggles
+                            button(type='button' class='active') 100 гр
+                            button(type='button') Ø 25 см
+                            button(type='button') Ø 30 см
+                            button(type='button') Ø 35 см
+                        +e.nutrition-data
+                            table
+                                thead
+                                    th
+                                    th Ккалл
+                                    th Белки
+                                    th Жиры
+                                    th Углеводы
+                                tbody
+                                    tr
+                                        th 100 гр
+                                        td 256
+                                        td 20
+                                        td 26
+                                        td 56
+                    +e.size
+                        +e.subtitle Размер пиццы:
+                        +e.size-toggles
+                            +e.BUTTON.size-toggle(type='button')
+                                span.info
+                                    span.size 25 см 
+                                    span.weight (450 гр)
+                                span.price 375 ₽
+                            +e.BUTTON.size-toggle(type='button' class='active')
+                                span.info
+                                    span.size 30 см 
+                                    span.weight (680 гр)
+                                span.price 565 ₽
+                            +e.BUTTON.size-toggle(type='button')
+                                span.info
+                                    span.size 35 см 
+                                    span.weight (920 гр)
+                                span.price 695 ₽
+                    +e.counter 
+                        +counter('big')
+                    +e.BUTTON.add(type='button') Добавить в корзину
+                    +e.seo
+                        p Пицца Чизбургер заказать в Воронеже
+                        p Пицца Чизбургер заказать доставку на дом в Воронеже
+                        p Пицца Чизбургер заказать от DONGIO
