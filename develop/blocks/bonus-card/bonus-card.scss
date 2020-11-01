@@ -1,10 +1,14 @@
 .bonus-card {
+    position: relative;
     width: 255px;
     height: 144px;
 
     color: $text-color-white;
 
     border-radius: 4px;
+
+    background-image: url(../images/bonus-card/card.svg);
+    background-size: cover;
 
     &__title {
         position: absolute;
@@ -24,7 +28,7 @@
         height: 24px;
         position: absolute;
         top: 10px;
-        right: 20px;
+        right: 12px;
 
         font-size: 16px;
         color: $text-color;
@@ -49,7 +53,7 @@
     &__sum-value {
         min-width: 85px;
         height: 25px;
-        padding: 8px 0;
+        padding: 0 8px;
 
         font-size: 16px;
         line-height: 25px;

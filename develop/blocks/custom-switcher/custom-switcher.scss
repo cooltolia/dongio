@@ -33,11 +33,12 @@
             height: 18px;
             border-radius: 50%;
             left: 2px;
+            right: 2px;
             top: 2px;
 
             background-color: #bdc6d0;
 
-            transition: transform 300ms ease, background-color 300ms ease;
+            transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
         }
     }
 
@@ -46,8 +47,7 @@
 
         &::before {
             background-color: $theme-orange;
-            left: auto;
-            transform: translateX(24px);
+            transform: translateX(22px);
         }
     }
 
@@ -73,7 +73,7 @@
 @media #{$mobile} {
     .custom-switcher {
         &__icon {
-            top: 0;
+            top: -1px;
         }
 
         &__text {

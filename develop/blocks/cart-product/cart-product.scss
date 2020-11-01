@@ -8,6 +8,7 @@
     &__delete {
         @include btn-reset;
         position: absolute;
+        z-index: 1;
         width: 10px;
         height: 10px;
         top: 6px;
@@ -17,6 +18,14 @@
             @include svg-icon;
 
             fill: $text-color;
+
+            transition: fill 300ms ease;
+        }
+
+        &:hover {
+            svg {
+                fill: $theme-color-dark;
+            }
         }
     }
 

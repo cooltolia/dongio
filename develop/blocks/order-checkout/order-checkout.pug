@@ -21,6 +21,18 @@ mixin order-checkout()
                     .icon
                         +icon('r-arrow')
         +e.actions
-            +e.A.login(href='#')
-                +custom-switcher
-                    | Войдите в <span class='underline'>личный кабинет</span> для оплаты бонусами
+            if (loggedIn)
+                +e.bonus
+                    +e.bonus-switcher
+                        +custom-switcher('bonus', 'bonusSwithcer')(checked = bonusWriteOff ? '' : false)
+                           | Оплатить часть бонусами? 
+                    +e.bonus-value Доступно к списанию: 67 ₽
+                if (bonusWriteOff)
+                    +e.FORM.bonus-form
+                        +e.bonus-input
+                            +custom-input('text', 'bonus_recall', 'bonusRecall', 'Списать', '100 ₽')(inputmode='numeric')
+                        +e.BUTTON.bonus-submit(type='submit') Применить
+            else
+                +e.A.login(href='#')
+                    +custom-switcher
+                        | Войдите в <span class='underline'>личный кабинет</span> для оплаты бонусами

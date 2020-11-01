@@ -1,9 +1,11 @@
 mixin account-trigger()
     +b.account-trigger
-        +e.A.login(href='#') 
-            | Войти
-            +icon('arrow')
-        //- modifiers: ['current']
-        //- +e.A.link(href='#')
-        //-     +icon('account')
-        //-     | Личный кабинет
+        if (loggedIn)
+            +e.A.link(href='#' class=accountPage ? 'current' : '')
+                +icon('account')
+                | Личный кабинет
+        else 
+            +e.A.login(href='#') 
+                | Войти
+                +icon('arrow')
+        
