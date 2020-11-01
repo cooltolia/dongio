@@ -1,0 +1,19 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +breadcrumbs(['Корзина', 'Оформление заказа'])
+        +order-layout
+            +e.main
+                +order-checkout
+            +e.ASIDE.sidebar
+                +login-appeal
+        +sauses
+        +main-footer
+        +doc-footer

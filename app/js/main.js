@@ -1233,6 +1233,31 @@ function globalInitFunction() {
   })();
 
   (function () {
+    /** just a small code for mobile order steps scroll */
+    var stepsNode = document.querySelector('.order-steps');
+    if (!stepsNode) return;
+    var list = stepsNode.querySelector('.order-steps__list');
+    var listWidth = list.scrollWidth;
+    var stepsNodeWidth = stepsNode.offsetWidth;
+
+    if (listWidth > stepsNodeWidth) {
+      list.addEventListener('scroll', function (e) {
+        var scrollLeft = list.scrollLeft;
+        var startPoint = 20;
+        var finishPoint = listWidth - stepsNodeWidth - 20;
+
+        if (scrollLeft > finishPoint) {
+          stepsNode.classList.add('scroll-finish');
+        } else {
+          stepsNode.classList.remove('scroll-finish');
+        }
+      });
+    } else {
+      stepsNode.classList.add('scroll-finish');
+    }
+  })();
+
+  (function () {
     var socialsImages = document.querySelectorAll('.socials__link img');
     if (socialsImages.length === 0) return;
     lazyLoadImages(socialsImages);

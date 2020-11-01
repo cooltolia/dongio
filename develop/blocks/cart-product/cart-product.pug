@@ -1,0 +1,23 @@
+mixin cart-product(data)
+    +b.cart-product
+        +e.BUTTON.delete
+            +icon('close')
+        +e.body
+            +e.image
+                img(src=data.image, alt='')
+            +e.title
+                +e.name !{data.name}
+                +e.type !{data.type}
+            +e.description
+                | !{data.description}
+            if (data.selectedIngredients)
+                +e.selected-ingredients
+                    each item in data.selectedIngredients
+                        .item
+                            | !{item}
+                            button.remove
+                                +icon('close')
+        +e.footer
+            +e.counter
+                +counter('big')(value='1')
+            +e.price !{data.price}

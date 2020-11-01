@@ -1,0 +1,26 @@
+mixin order-checkout()
+    +b.order-checkout
+        +e.cart
+            +e.products
+                each product in cartProducts
+                    +e.product
+                        +cart-product(product)
+            +e.aside.--m-hidden
+                +e.BUTTON.clear очистить корзину
+        +e.footer
+            +e.data
+                +e.delivery
+                    .heading Доставка
+                    .value 100 ₽
+                +e.total
+                    .heading Итого к оплате:
+                    .value 670 ₽
+            +e.aside
+                +e.A.next(href='#')
+                    | Далее
+                    .icon
+                        +icon('r-arrow')
+        +e.actions
+            +e.A.login(href='#')
+                +custom-switcher
+                    | Войдите в <span class='underline'>личный кабинет</span> для оплаты бонусами

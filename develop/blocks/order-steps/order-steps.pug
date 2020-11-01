@@ -1,0 +1,13 @@
+mixin order-steps()
+    +b.order-steps
+        +e.UL.list
+            +e.LI.item
+                +e.A.link.filled(href='#') Подтвердите свой заказ
+                +e.icon
+                    +icon('long-arrow')
+            +e.LI.item
+                +e.A.link.active(href='#') Заполните свои данные
+                +e.icon
+                    +icon('long-arrow')
+            +e.LI.item
+                +e.A.link(href='#') Оплатите заказ

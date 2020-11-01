@@ -1,0 +1,72 @@
+.custom-input {
+    $this: &;
+    position: relative;
+
+    &.error {
+        #{$this}__input {
+            border-color: $theme-color;
+        }
+
+        #{$this}__error {
+            opacity: 1;
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+
+        color: $text-color;
+        font-size: 12px;
+        line-height: 1.6;
+        font-weight: 600;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        padding: 0 10px;
+        height: 46px;
+
+        color: $text-color;
+        font-size: 16px;
+        line-height: 50px;
+
+        border: 1px solid $grey-dark;
+        border-radius: 4px;
+        outline: none;
+        appearance: none;
+
+        transition: border-color 300ms ease;
+
+        &::placeholder {
+            color: $text-color-light
+        }
+
+        &:focus {
+            border-color: $text-color;
+        }
+
+        &:read-only {
+            border-color: transparent;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+
+    &__error {
+        display: block;
+        
+        font-size: 12px;
+        color: $theme-color;
+        line-height: 1.25;
+        text-align: right;
+        text-indent: 4px;
+
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 300ms ease;
+    }
+}

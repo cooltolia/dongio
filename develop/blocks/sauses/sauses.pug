@@ -1,0 +1,10 @@
+mixin sauses()
+    +b.SECTION.sauses
+        +inner
+            +e.title
+                +title 
+                    | Добавить соус для бортиков
+            +e.list
+                each sause in sauses
+                    +e.card
+                        +sause-card(sause)

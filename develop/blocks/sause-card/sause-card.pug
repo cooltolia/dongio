@@ -1,0 +1,9 @@
+mixin sause-card(data)
+    +b.sause-card
+        +e.image
+            img(src=data.image, alt=data.name + ' соус')
+        +e.name !{data.name}
+        +e.data
+            +e.size !{data.size}
+            +e.price !{data.price}
+        +e.BUTTON.add(type='button') Добавить

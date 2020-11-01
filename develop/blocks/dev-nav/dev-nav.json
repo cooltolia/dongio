@@ -32,6 +32,10 @@
             {
                 "link": "favourites-page.html",
                 "text": "Избранное"
+            },
+            {
+                "link": "order-page-1.html",
+                "text": "Оформление заказа (без регистрации)"
             }
         ]
     }

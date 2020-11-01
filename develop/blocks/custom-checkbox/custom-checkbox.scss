@@ -1,0 +1,62 @@
+.custom-checkbox {
+    $this: &;
+    position: relative;
+
+    &__label {
+        display: block;
+        position: relative;
+        padding: 0;
+        padding-left: 24px;
+
+        color: $text-color;
+        font-size: 16px;
+        line-height: 1.6;
+
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            border: solid 1px $grey-dark;
+            border-radius: 4px;
+            background-color: #fff;
+
+            transition: all 300ms ease;
+            box-sizing: border-box;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            opacity: 0;
+
+            border-radius: 4px;
+            background-color: $grey-dark;
+
+            transition: opacity 300ms ease;
+        }
+    }
+
+    &__input {
+        position: absolute;
+        opacity: 0;
+
+        &:checked + #{$this}__label {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

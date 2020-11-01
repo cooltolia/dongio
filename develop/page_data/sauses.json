@@ -1,0 +1,40 @@
+{
+    "sauses": [
+        {
+            "image": "images/sauses/image1.jpg",
+            "name": "Кисло-сладкий",
+            "size": "25 мл",
+            "price": "50 ₽"
+        },
+        {
+            "image": "images/sauses/image2.jpg",
+            "name": "Барбекью",
+            "size": "25 мл",
+            "price": "50 ₽"
+        },
+        {
+            "image": "images/sauses/image3.jpg",
+            "name": "Сырный",
+            "size": "25 мл",
+            "price": "50 ₽"
+        },
+        {
+            "image": "images/sauses/image4.jpg",
+            "name": "Чесночный",
+            "size": "25 мл",
+            "price": "50 ₽"
+        },
+        {
+            "image": "images/sauses/image5.jpg",
+            "name": "Томатный кетчуп",
+            "size": "25 мл",
+            "price": "50 ₽"
+        },
+        {
+            "image": "images/sauses/image6.jpg",
+            "name": "Карри",
+            "size": "25 мл",
+            "price": "50 ₽"
+        }
+    ]
+}

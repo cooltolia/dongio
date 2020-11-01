@@ -1,0 +1,7 @@
+mixin custom-switcher(name, id)
+    +b.custom-switcher
+        +e.LABEL.label(for=id) 
+            +e.INPUT.input(type="checkbox" name=name id=id)
+            +e.SPAN.icon
+            +e.SPAN.text
+                block

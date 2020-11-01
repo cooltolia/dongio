@@ -32,6 +32,10 @@
 			{
 				"link": "favourites-page.html",
 				"text": "Избранное"
+			},
+			{
+				"link": "order-page-1.html",
+				"text": "Оформление заказа (без регистрации)"
 			}
 		]
 	},
@@ -547,6 +551,64 @@
 			],
 			"price": "325 ₽",
 			"addButton": "Добавить в корзину"
+		}
+	],
+	"cartProducts": [
+		{
+			"image": "images/products/product2.jpg",
+			"name": "Пицца Чизбургер",
+			"type": "(Ø 35 см, стандартное тесто)",
+			"description": "Соус бешамель, сыр моцарелла, говядина, бекон, американский сыр, красный лук, томаты, соленые огурчики",
+			"selectedIngredients": [
+				"Жареный цыпленок",
+				"Халапеньо"
+			],
+			"price": "670 ₽"
+		},
+		{
+			"image": "images/products/product4.jpg",
+			"name": "Пепперони",
+			"type": "(Ø 35 см, стандартное тесто)",
+			"description": "Пицца соус, сыр моцарелла, пепперони",
+			"price": "0 ₽"
+		}
+	],
+	"sauses": [
+		{
+			"image": "images/sauses/image1.jpg",
+			"name": "Кисло-сладкий",
+			"size": "25 мл",
+			"price": "50 ₽"
+		},
+		{
+			"image": "images/sauses/image2.jpg",
+			"name": "Барбекью",
+			"size": "25 мл",
+			"price": "50 ₽"
+		},
+		{
+			"image": "images/sauses/image3.jpg",
+			"name": "Сырный",
+			"size": "25 мл",
+			"price": "50 ₽"
+		},
+		{
+			"image": "images/sauses/image4.jpg",
+			"name": "Чесночный",
+			"size": "25 мл",
+			"price": "50 ₽"
+		},
+		{
+			"image": "images/sauses/image5.jpg",
+			"name": "Томатный кетчуп",
+			"size": "25 мл",
+			"price": "50 ₽"
+		},
+		{
+			"image": "images/sauses/image6.jpg",
+			"name": "Карри",
+			"size": "25 мл",
+			"price": "50 ₽"
 		}
 	],
 	"testimonials": [
