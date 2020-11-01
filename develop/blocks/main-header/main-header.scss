@@ -160,12 +160,19 @@
             }
         }
 
-        &:active,
-        &.current {
+        &:active {
             color: $theme-color-dark;
 
             &::after {
                 transform: scaleX(0);
+            }
+        }
+
+        &.current {
+            color: $theme-color-dark;
+
+            &::after {
+                transform: scaleX(1);
             }
         }
     }

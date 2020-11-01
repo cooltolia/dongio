@@ -92,8 +92,12 @@
 
             border: 1px solid $grey;
             border-radius: 4px;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
-        
+
         .remove {
             @include btn-reset;
             position: relative;
@@ -188,6 +192,5 @@
             width: auto;
             text-align: right;
         }
-        
     }
 }

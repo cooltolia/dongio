@@ -857,6 +857,8 @@ th {
       line-height: 20px;
       border: 1px solid #dfe7ec;
       border-radius: 4px; }
+      .cart-product__selected-ingredients .item:last-child {
+        margin-right: 0; }
     .cart-product__selected-ingredients .remove {
       padding: 0;
       margin: 0;
@@ -2836,11 +2838,16 @@ th {
     .main-header__category-link:hover::after {
       -webkit-transform: scaleX(1);
               transform: scaleX(1); }
-    .main-header__category-link:active, .main-header__category-link.current {
+    .main-header__category-link:active {
       color: #ab3030; }
-      .main-header__category-link:active::after, .main-header__category-link.current::after {
+      .main-header__category-link:active::after {
         -webkit-transform: scaleX(0);
                 transform: scaleX(0); }
+    .main-header__category-link.current {
+      color: #ab3030; }
+      .main-header__category-link.current::after {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1); }
   .main-header__favourites {
     position: relative;
     padding-left: 24px;
@@ -3709,6 +3716,43 @@ th {
         -webkit-transform: translateY(0);
                 transform: translateY(0);
         pointer-events: all; }
+  .product-card__selected-ingredients {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin: 0 0 4px; }
+    .product-card__selected-ingredients .item {
+      margin-right: 6px;
+      margin-bottom: 6px;
+      padding: 0 4px;
+      height: 20px;
+      color: #757c80;
+      font-size: 12px;
+      line-height: 20px;
+      border: 1px solid #dfe7ec;
+      border-radius: 4px; }
+      .product-card__selected-ingredients .item:last-child {
+        margin-right: 0; }
+    .product-card__selected-ingredients .remove {
+      padding: 0;
+      margin: 0;
+      background: none;
+      border: none;
+      outline: none;
+      position: relative;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-left: 4px; }
+      .product-card__selected-ingredients .remove svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        fill: currentColor; }
   .product-card__options {
     padding: 3px;
     margin-bottom: 10px;

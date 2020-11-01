@@ -21,6 +21,13 @@ mixin product-card(data)
                     button.trigger(type='button' title='Выбрать дополнительные ингрудиенты ') добавить
                     .list
                         +ingredients
+            if (data.selectedIngredients)
+                +e.selected-ingredients
+                    each item in data.selectedIngredients
+                        .item
+                            | !{item}
+                            button.remove
+                                +icon('close')
             if (data.hasOptions)
                 +e.options
                     +e.options-row

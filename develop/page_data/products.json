@@ -82,6 +82,7 @@
             "currentIngredients": 0,
             "typeOptions": ["Стандартное", "Тонкое"],
             "sizeOptions": ["25 см", "30 см", "35 см"],
+            "selectedIngredients": ["Жареный цыпленок", "Халапеньо"],
             "price": "325 ₽",
             "addButton": "Добавить в корзину"
         },

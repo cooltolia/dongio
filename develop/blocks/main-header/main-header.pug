@@ -29,7 +29,7 @@ mixin main-header()
                 +e.NAV.categories.scroll-start
                     +e.UL.categories-list
                         +e.LI.category
-                            +e.A.category-link(href='#') Пиццы
+                            +e.A.category-link(href='#' class=pizzaPage ? 'current' : '') Пиццы
                         +e.LI.category
                             +e.A.category-link(href='#') Бургеры
                         +e.LI.category
