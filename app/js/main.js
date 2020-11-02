@@ -213,10 +213,10 @@ function globalInitFunction() {
         this.selected = this.select.querySelector('.custom-select__selected');
         this.dropdown = this.select.querySelector('.custom-select__dropdown');
         this.optionsList = this.select.querySelector('.custom-select__options');
-        this.inititalPlaceholder = this.selected.textContent.trim();
-        new SimpleBar(this.dropdown, {
-          autoHide: false
-        });
+        this.inititalPlaceholder = this.selected.textContent.trim(); // new SimpleBar(this.dropdown, {
+        //     autoHide: false,
+        // });
+
         /** keycodes */
 
         this.keyCodes = {
@@ -1230,6 +1230,13 @@ function globalInitFunction() {
     //         renderMobileMenu();
     //     }
     // });
+  })();
+
+  (function () {
+    var orderForm = document.querySelector('.order-form');
+    if (!orderForm) return;
+    var select = orderForm.querySelector('.custom-select');
+    new CustomSelect(select);
   })();
 
   (function () {

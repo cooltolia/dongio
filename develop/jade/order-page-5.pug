@@ -1,0 +1,31 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+- const courierDelivery = true
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +breadcrumbs(['Корзина', 'Оформление заказа'])
+        +order-layout
+            +e.main
+                +order-form
+            +e.ASIDE.sidebar
+                +e.login-appeal
+                    +login-appeal
+                +e.delivery-time
+                    .input
+                        +custom-checkbox('delivery-toggle', 'deliveryToggle', 'Доставка ко времени')
+                    .input
+                        +custom-input('text', 'delivery-date', 'delivetyDate', 'Дата доставки', '21.09.2020')
+                    .input
+                        +custom-input('text', 'delivery-time', 'delivetyTime', 'Время доставки', '15:30')
+                +e.A.next(href='#')
+                    | Далее
+                    .icon
+                        +icon('r-arrow')
+        +main-footer
+        +doc-footer

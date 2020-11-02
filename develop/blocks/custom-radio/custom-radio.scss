@@ -1,4 +1,4 @@
-.custom-checkbox {
+.custom-radio {
     $this: &;
     position: relative;
 
@@ -62,11 +62,12 @@
 }
 
 @media #{$mobile} {
-    .custom-checkbox {
+    .custom-radio {
         &__label {
             padding-left: 40px;
 
             &::before {
+               
                 width: 30px;
                 height: 30px;
             }

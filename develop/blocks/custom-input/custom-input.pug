@@ -3,6 +3,7 @@ mixin custom-input(inputType, id, name, label, placeholder, required, error, isV
         if (label)
             +e.LABEL.label(for=id)= label
                 if (required)
+                    | 
                     span *
         if (required)
             +e.INPUT.input(type=inputType id=id name=name placeholder=placeholder required)&attributes(attributes)

@@ -30,7 +30,7 @@
 
         color: $text-color;
         font-size: 16px;
-        line-height: 50px;
+        line-height: 46px;
 
         border: 1px solid $grey-dark;
         border-radius: 4px;
@@ -40,7 +40,7 @@
         transition: border-color 300ms ease;
 
         &::placeholder {
-            color: $text-color-light
+            color: $text-color-light;
         }
 
         &:focus {
@@ -56,9 +56,15 @@
         }
     }
 
+    &__tip {
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
     &__error {
         display: block;
-        
+
         font-size: 12px;
         color: $theme-color;
         line-height: 1.25;

@@ -23,9 +23,9 @@ class CustomSelect {
 
         this.inititalPlaceholder = this.selected.textContent.trim();
 
-        new SimpleBar(this.dropdown, {
-            autoHide: false,
-        });
+        // new SimpleBar(this.dropdown, {
+        //     autoHide: false,
+        // });
 
         /** keycodes */
         this.keyCodes = {

@@ -1,0 +1,50 @@
+mixin order-form()
+    +b.FORM.order-form(method='post' action='#')
+        +e.input-row
+            +e.input
+                +custom-input('text', 'fio', 'fio', 'Имя Фамилия', 'Имя Фамилия', true)
+            +e.input
+                +custom-input('text', 'phone', 'phone', 'Телефон', '+7 123 456 78 99', true)
+        +e.checkboxes-row
+            +e.checkboxes-title Способ получения заказа:
+            +e.checkboxes
+                +e.checkbox
+                    +custom-radio('deliveryType', 'delivery_courier', 'Доставка курьером')(checked='')
+                +e.checkbox
+                    +custom-radio('deliveryType', 'delivery_self', 'Самовывоз')
+        if (courierDelivery)
+            +e.input-row.--half
+                +e.input
+                    +custom-select('district', ['Коминтерновский', 'Центральный', 'Другой'], 'Выберите адрес', 'Пункт самовывоза *')
+            +e.map
+                img(src='images/map.jpg', alt="")
+        else
+            +e.input-row
+                +e.input
+                    +custom-select('district', ['Коминтерновский', 'Центральный', 'Другой'], 'Выберите район', 'Район *')
+                +e.input
+                    +custom-input('text', 'street', 'street', 'Улица', 'Улица', true)
+            +e.input-row.--fourth
+                +e.input
+                    +custom-input('text', 'house', 'house', 'Дом', 'Дом', true)
+                +e.input
+                    +custom-input('text', 'entrance', 'entrance', 'Подъезд', 'Подъезд')
+                +e.input
+                    +custom-input('text', 'floor', 'floor', 'Этаж', 'Этаж')
+                +e.input
+                    +custom-input('text', 'phone', 'phone', 'Квартира (офис)', 'Квартира')
+        +e.input-row
+            +e.input
+                +custom-textarea('comment', 'comment', 'Комментарий', 'Комментарий')
+        +e.checkboxes-row
+            +e.checkboxes-title Способ оплаты:
+            +e.checkboxes
+                +e.checkbox
+                    +custom-radio('paymentType', 'payment_online', 'Картой онлайн')
+                +e.checkbox
+                    +custom-radio('paymentType', 'payment_courier', 'Картой курьеру')
+                +e.checkbox
+                    +custom-radio('paymentType', 'payment_cash', 'Наличными курьеру')(checked='')
+        +e.input-row
+            +e.input.--small
+                +custom-input('text', 'change', 'change', 'Сдача с купюры', '1000')
