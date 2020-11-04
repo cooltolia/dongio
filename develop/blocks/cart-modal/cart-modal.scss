@@ -136,29 +136,6 @@
         }
     }
 
-    &__order {
-        @include btn-reset;
-        height: 46px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 20px;
-
-        color: $text-color-white;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.6;
-        text-decoration: none;
-
-        background-color: $theme-color;
-        border-radius: 4px;
-
-        transition: background-color 300ms ease;
-
-        &:hover {
-            background-color: $theme-color-dark;
-        }
-    }
 }
 
 @media #{$tablet} {

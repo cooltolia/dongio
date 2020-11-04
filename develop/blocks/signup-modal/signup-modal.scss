@@ -1,0 +1,8 @@
+@media #{$mobile} {
+    .signup-modal {
+        .common-modal__submit {
+            font-size: 15px;
+            padding: 0 10px;
+        }
+    }
+}

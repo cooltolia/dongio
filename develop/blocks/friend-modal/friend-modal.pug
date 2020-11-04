@@ -1,0 +1,12 @@
+mixin friend-modal()
+    +b.common-modal.friend-modal
+        +e.BUTTON.close(type='button')
+            +icon('close')
+        +e.title
+            +title
+                | Пригласить друга
+        +e.FORM.form
+            +e.input
+                +custom-input('text', 'link', 'link', 'Ваша уникальная ссылка', 'https///abrakadabra')
+            +e.BUTTON.submit.btn(type='submit') Скопировать в буфер
+        +e.info Отправьте ссылку вашему другу и как только ваш друг совершит первый заказ, каждый из вас получит по 200 бонусов на счет.

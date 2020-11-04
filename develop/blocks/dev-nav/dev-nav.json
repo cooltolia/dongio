@@ -69,6 +69,36 @@
                 "link": "order-success-page.html",
                 "text": "Заказ оформлен"
             }
+        ],
+        "account": [
+            {
+                "link": "login-modal-page.html",
+                "text": "Войти в личный кабинет"
+            },
+            {
+                "link": "signup-modal-page.html",
+                "text": "Зарегистрироваться"
+            },
+            {
+                "link": "sms-modal-page.html",
+                "text": "Введите код из смс"
+            },
+            {
+                "link": "friend-modal-page.html",
+                "text": "Пригласить друга"
+            },
+            {
+                "link": "feedback-success-page.html",
+                "text": "Спасибо за отзыв!"
+            },
+            {
+                "link": "account-page-1.html",
+                "text": "Личный кабинет"
+            },
+            {
+                "link": "account-page-2.html",
+                "text": "Личный кабинет (редактирование информации)"
+            }
         ]
     }
 }

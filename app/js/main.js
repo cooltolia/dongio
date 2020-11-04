@@ -1116,6 +1116,13 @@ function globalInitFunction() {
   }();
 
   (function () {
+    var accountInfo = document.querySelector('.account-info');
+    if (!accountInfo) return;
+    var select = accountInfo.querySelector('.custom-select');
+    new CustomSelect(select);
+  })();
+
+  (function () {
     var catalogFilter = document.querySelector('.catalog-filter');
     if (!catalogFilter) return;
     var ingredientsTrigger = document.querySelector('.catalog-filter__ingredients-trigger');

@@ -1,6 +1,6 @@
 mixin order-success()
     +b.SECTION.order-success
-        +e.close
+        +e.BUTTON.close(type='button')
             +icon('close')
         +e.title
             +title
@@ -10,6 +10,6 @@ mixin order-success()
             p А также ...
         +e.card
             +bonus-card
-        +e.A.action(href='#') Создать личный кабинет
+        +e.A.action.btn(href='#') Создать личный кабинет
         +e.info Нажимая кнопку <a href='#'>«Войти в личный кабинет»</a> я соглашаюсь с политикой конфиденциальности
         +e.info Уже есть аккаунт? <a href='#'>Войти</a>

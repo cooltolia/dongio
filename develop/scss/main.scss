@@ -50,5 +50,9 @@ body {
 
     @media #{$mobile} {
         padding-bottom: 0;
+
+        .modal-inner {
+            align-items: flex-end;
+        }
     }
 }

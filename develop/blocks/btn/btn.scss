@@ -1,0 +1,42 @@
+.btn {
+    @include btn-reset;
+    width: 100%;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+
+    color: $text-color-white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    text-decoration: none;
+
+    background-color: $theme-color;
+    border-radius: 4px;
+
+    transition: background-color 300ms ease;
+
+    &:hover {
+        background-color: $theme-color-dark;
+    }
+
+    &.disabled {
+        color: $grey-dark;
+
+        background-color: $grey;
+
+        pointer-events: none;
+    }
+}
+
+@media #{$tablet} {
+    .btn {
+    }
+}
+
+@media #{$mobile} {
+    .btn {
+    }
+}

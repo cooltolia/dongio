@@ -1,0 +1,21 @@
+mixin sms-modal()
+    +b.common-modal.sms-modal
+        +e.BUTTON.close(type='button')
+            +icon('close')
+        +e.title
+            +title
+                | Введите код из смс
+        +e.FORM.form
+            +e.input
+                .sms-modal__label Код *
+                .sms-modal__inputs
+                    .sms-modal__input
+                        input(type='text' name='code1')
+                    .sms-modal__input
+                        input(type='text' name='code2')
+                    .sms-modal__input
+                        input(type='text' name='code3')
+                    .sms-modal__input
+                        input(type='text' name='code4')
+            +e.info Если в течение 5 минут вы не получили смс с кодом, нажмите <a href='#'>Отправить снова</a> или <a href='#'>свяжитесь с нами</a>
+            +e.BUTTON.submit.btn(type='submit') Зарегистрироваться

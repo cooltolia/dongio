@@ -49,7 +49,7 @@
         }
 
         &:read-only {
-            border-color: transparent;
+            border-color: $grey;
         }
 
         &:disabled {

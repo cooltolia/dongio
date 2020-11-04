@@ -1,0 +1,18 @@
+mixin signup-modal()
+    +b.common-modal.signup-modal
+        +e.BUTTON.close(type='button')
+            +icon('close')
+        +e.title
+            +title
+                | Зарегистрироваться
+        +e.FORM.form
+            +e.input
+                +custom-input('text', 'phone', 'phone', 'Имя Фамилия', 'Имя Фамилия', true)
+            +e.input
+                +custom-input('text', 'phone', 'phone', 'Телефон', '+7 123 456 78 99', true)
+                    +e.tip В течении 5 минут вам будет отправлена смс с паролем для подтверждения номера
+            +e.input
+                +custom-input('email', 'email', 'email', 'E-mail', 'example@mail.ru')
+            +e.BUTTON.submit.btn.disabled(type='submit') Получить смс для регистрации
+        +e.info Нажимая кнопку <a href='#'>«Войти в личный кабинет»</a> я соглашаюсь с политикой конфиденциальности
+        +e.info У вас уже есть аккаунт? <a href='#'>Войти</a>

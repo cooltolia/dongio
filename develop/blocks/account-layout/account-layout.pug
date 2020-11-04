@@ -1,0 +1,23 @@
+mixin account-layout()
+    +b.account-layout
+        +inner
+            +e.title
+                +title
+                    | Личный кабинет
+            +e.wrapper
+                +e.ASIDE.sidebar
+                    +e.name Константин <br>Константинопольский
+                    +e.card
+                        +bonus-card
+                    +e.BUTTON.invite(href='#') Пригласить друга
+                    +e.A.aside-link(href='#') Подробнее о бонусной программе
+                    +e.A.aside-link(href='#') Выйти из личного кабинета
+                +e.MAIN.main
+                    +e.NAV.nav
+                        +e.UL.nav-list
+                            +e.LI.nav-item
+                                +e.A.nav-link.current(href='#') Личная информация
+                            +e.LI.nav-item
+                                +e.A.nav-link(href='#') История заказов
+                    +e.content
+                        block

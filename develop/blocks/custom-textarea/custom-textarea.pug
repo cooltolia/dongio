@@ -6,7 +6,9 @@ mixin custom-textarea(id, name, label, placeholder, required, error, isValid)
                     span *
         if (required)
             +e.TEXTAREA.input(id=id name=name placeholder=placeholder required)&attributes(attributes)
+                block
         else
             +e.TEXTAREA.input(id=id name=name placeholder=placeholder)&attributes(attributes)
+                block
         if (error)
             +e.SPAN.error.error= error

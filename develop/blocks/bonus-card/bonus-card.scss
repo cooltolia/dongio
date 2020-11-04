@@ -32,6 +32,12 @@
 
         font-size: 16px;
         color: $text-color;
+
+        transition: color 300ms ease;
+
+        &:hover {
+            color: $theme-color-dark;
+        }
     }
 
     &__sum {

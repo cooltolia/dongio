@@ -1,0 +1,10 @@
+mixin feedback-success()
+    +b.common-modal.feedback-success
+        +e.BUTTON.close(type='button')
+            +icon('close')
+        +e.title
+            +title
+                | Спасибо за отзыв!
+        +e.text
+            p Благодаря вам мы становимся только лучше каждый день! Если у вас возникла проблема, наш менеджер обязательно ответит вам на почту и предложит решение!
+        +e.A.back.btn(href='./') Вернуться на страницу

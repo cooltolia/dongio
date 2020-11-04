@@ -112,38 +112,6 @@
         }
     }
 
-    &__pay {
-        @include btn-reset;
-        width: 100%;
-        height: 46px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        color: $text-color-white;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.6;
-        text-decoration: none;
-
-        background-color: $theme-color;
-        border-radius: 4px;
-
-        transition: background-color 300ms ease;
-
-        &.disabled {
-            color: $grey-dark;
-
-            background-color: $grey;
-
-            pointer-events: none;
-        }
-        
-        &:hover {
-            background-color: $theme-color-dark;
-        }
-    }
-
     &__save-card {
         width: 100%;
         margin-top: 20px;

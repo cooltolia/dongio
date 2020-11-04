@@ -1,0 +1,89 @@
+mixin account-info()
+    +b.account-info
+        +e.column
+            +e.row
+                +e.input
+                    +custom-input('text', 'fio', 'fio', 'Имя Фамилия', 'Имя Фамилия')(value='Константин Константинопольский' readonly='')
+            +e.row
+                +e.input
+                    +custom-input('text', 'phone', 'phone', 'Телефон', 'Телефон')(value='+7 123 456 78 99' readonly='')
+            +e.row
+                +e.input
+                    +custom-input('email', 'email', 'email', 'E-mail', 'E-mail')(value='example@mail.ru' readonly='')
+            +e.row.--mb
+                +e.input
+                    +custom-input('password', 'password', 'password', 'Пароль', 'Пароль')(value='******' readonly='')
+                +e.toggles
+                    +e.BUTTON.change(type='button' class=editAccount ? 'active' : '') изменить пароль
+            if (editAccount)
+                +e.FORM.password-form(action='#' method='post')
+                    +e.row.--password
+                        +e.input.--half
+                            +custom-input('password', 'oldpass', 'oldpass', 'Старый пароль', 'Старый пароль')
+                        .icon
+                            +icon('r-arrow')
+                        +e.input.--half
+                            +custom-input('password', 'newpass', 'newpass', 'Новый пароль', 'Новый пароль')
+                    +e.info В пароле должно быть минимум 6 знаков и как минимум 1 цифра.
+                    +e.actions
+                        +e.BUTTON.reset(type='button') Отменить
+                        +e.BUTTON.save.btn(type='submit') Сохранить
+            +e.row
+                +e.input
+                    +custom-switcher('subsribe1', 'subsribe1')(checked='')
+                        | Получать информацию о заказе по указанному e-mail
+            +e.row
+                +e.input
+                    +custom-switcher('subsribe2', 'subsribe2')
+                        | Получать уведомления с акциями и специальными предложениями
+        +e.column
+            +e.row.--mb
+                +e.input
+                    +custom-textarea('address', 'address', 'Адрес доставки:', 'Адрес доставки')(readonly='')
+                        | р. Коминтерновский, улица Вязанская, дом 45, подъезд 1, этаж 1, квартира 15, код 1234.
+                +e.toggles
+                    +e.BUTTON.change(type='button') изменить
+                    +e.BUTTON.change(type='button' class=editAccount ? 'active' : '') добавить адрес
+            if (editAccount)
+                +e.FORM.address-form(action='#' method='post')
+                    +e.row
+                        +e.input
+                            +custom-select('district', ['Коминтерновский', 'Центральный', 'Другой'], 'Выберите район', 'Район *')
+                    +e.row
+                        +e.input
+                            +custom-input('text', 'street', 'street', 'Улица', 'Улица', true)
+                    +e.row
+                        +e.input.--half
+                            +custom-input('text', 'house', 'house', 'Дом', 'Дом', true)
+                        +e.input.--half
+                            +custom-input('text', 'entrance', 'entrance', 'Подъезд', 'Подъезд')
+                    +e.row
+                        +e.input.--half
+                            +custom-input('text', 'floor', 'floor', 'Этаж', 'Этаж')
+                        +e.input.--half
+                            +custom-input('text', 'phone', 'phone', 'Квартира (офис)', 'Квартира')
+                    +e.actions
+                        +e.BUTTON.reset(type='button') Отменить
+                        +e.BUTTON.save.btn.disabled(type='submit') Сохранить
+            +e.row
+                +e.input
+                    +custom-input('text', 'card', 'card', 'Банковские карты:', 'Номер карты')(value='**** **** **** 1234' readonly='')
+                +e.toggles
+                    +e.BUTTON.change(type='button') изменить
+                    +e.BUTTON.change(type='button' class=editAccount ? 'active' : '') добавить карту
+            if (editAccount)
+                +e.FORM.card-form(action='#' method='post')
+                    +e.row
+                        +e.input
+                            +custom-input('text', 'card-number', 'cardNumber', 'Номер карты', 'Номер карты', true)
+                    +e.row
+                        +e.input
+                            +custom-input('text', 'card-name', 'cardName', 'Имя (как указано на карте)', 'NAME SURNAME')
+                    +e.row
+                        +e.input.--half
+                            +custom-input('text', 'card-duration', 'cardDuration', 'Срок действия', '__ / __')
+                        +e.input.--half
+                            +custom-input('text', 'card-code', 'cardCode', 'Защитный код (CVC)', 'CVC', true)
+                    +e.actions
+                        +e.BUTTON.reset(type='button') Отменить
+                        +e.BUTTON.save.btn(type='submit') Сохранить

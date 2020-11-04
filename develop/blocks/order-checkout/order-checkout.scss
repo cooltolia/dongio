@@ -100,23 +100,7 @@
     }
 
     &__next {
-        @include btn-reset;
         width: 160px;
-        height: 46px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        color: $text-color-white;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.6;
-        text-decoration: none;
-
-        background-color: $theme-color;
-        border-radius: 4px;
-
-        transition: background-color 300ms ease;
 
         .icon {
             position: relative;
@@ -131,10 +115,7 @@
                 stroke-width: 2px;
             }
         }
-
-        &:hover {
-            background-color: $theme-color-dark;
-        }
+      
     }
 
     &__login {

@@ -1,0 +1,15 @@
+mixin login-modal()
+    +b.common-modal.login-modal
+        +e.BUTTON.close(type='button')
+            +icon('close')
+        +e.title
+            +title
+                | Войти в личный кабинет
+        +e.FORM.form
+            +e.input
+                +custom-input('text', 'phone', 'phone', 'Телефон', '+7 123 456 78 99', true)
+            +e.input
+                +custom-input('text', 'phone', 'phone', 'Пароль', '', true)
+            +e.BUTTON.submit.btn(type='submit') Войти в личный кабинет
+        +e.info Нажимая кнопку <a href='#'>«Войти в личный кабинет»</a> я соглашаюсь с политикой конфиденциальности
+        +e.info У вас нет аккаунта? <a href='#'>Зарегистрироваться</a>

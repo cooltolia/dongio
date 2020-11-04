@@ -18,7 +18,7 @@ mixin order-payment()
                         +custom-checkbox('card-selecte', 'cardSelected', '')
             +e.action
                 if (!addNewCard)    
-                    +e.BUTTON.pay(type='submit') Оплатить
+                    +e.BUTTON.pay.btn(type='submit') Оплатить
         +e.BUTTON.add-card(type='button' class=addNewCard ? 'selected' : '') Добавить новую карту
         if (addNewCard)
             +e.FORM.form
@@ -32,7 +32,7 @@ mixin order-payment()
                     +e.input.--half
                         +custom-input('text', 'card-code', 'cardCode', 'Защитный код (CVC)', 'CVC', true)(value='123')
                 +e.action
-                    +e.BUTTON.pay(type='submit') Оплатить
+                    +e.BUTTON.pay.btn(type='submit') Оплатить
                 +e.save-card
                     +custom-switcher('save-card', 'saveCard')
                         | Сохранить данные карты в личном кабинете для упрощения процедуры заказа

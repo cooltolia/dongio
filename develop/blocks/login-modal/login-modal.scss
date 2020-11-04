@@ -1,4 +1,4 @@
-.order-success {
+.common-modal {
     position: relative;
     width: 80%;
     max-width: 410px;
@@ -10,15 +10,23 @@
     &__close {
         @include btn-reset;
         position: absolute;
-        width: 18px;
-        height: 18px;
-        right: 12px;
+        width: 14px;
+        height: 14px;
+        right: 20px;
         top: 12px;
 
         svg {
             @include svg-icon;
 
             fill: $text-color-light;
+
+            transition: fill 300ms ease;
+        }
+
+        &:hover {
+            svg {
+                fill: $theme-color-dark;
+            }
         }
     }
 
@@ -29,21 +37,19 @@
     &__text {
         font-size: 16px;
         line-height: 1.6;
+        margin-bottom: 20px;
 
         p {
             margin: 0 0 10px;
         }
     }
 
-    &__card {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
+    &__input {
+        margin-bottom: 10px;
     }
 
-    &__action {
-        height: 48px;
-        margin-bottom: 10px;
+    &__submit {
+        margin: 20px 0 10px;
     }
 
     &__info {
@@ -70,12 +76,12 @@
 }
 
 @media #{$tablet} {
-    .order-success {
+    .common-modal {
     }
 }
 
 @media #{$mobile} {
-    .order-success {
+    .common-modal {
         width: 100%;
         padding: 20px;
     }
