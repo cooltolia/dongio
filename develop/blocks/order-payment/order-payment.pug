@@ -1,0 +1,38 @@
+mixin order-payment()
+    +b.SECTION.order-payment
+        +e.P.text
+            | Оплата происходит через ПАО СБЕРБАНК с использованием Банковских карт следующих платежных систем:
+        +e.types
+            +e.type
+                img(src='images/payment/visa.jpg', alt='') 
+            +e.type
+                img(src='images/payment/mastercard.jpg', alt='') 
+            +e.type
+                img(src='images/payment/mir.jpg', alt='')
+        +e.FORM.form
+            +e.subtitle Выберите карту для оплаты:
+            +e.inputs
+                +e.input.__card
+                    +custom-input('text', 'payment-card', 'paymentCard', false, 'Номер карты')(value='**** **** **** 1234')
+                    +e.card-checkbox
+                        +custom-checkbox('card-selecte', 'cardSelected', '')
+            +e.action
+                if (!addNewCard)    
+                    +e.BUTTON.pay(type='submit') Оплатить
+        +e.BUTTON.add-card(type='button' class=addNewCard ? 'selected' : '') Добавить новую карту
+        if (addNewCard)
+            +e.FORM.form
+                +e.inputs
+                    +e.input
+                        +custom-input('text', 'card-number', 'cardNumber', 'Номер карты', 'Номер карты', true)(value='1234 1234 1234 1234')
+                    +e.input
+                        +custom-input('text', 'card-name', 'cardName', 'Имя (как указано на карте)', 'NAME SURNAME')(value='KONSTANTIN KONSTANTINOPOLSKIY')
+                    +e.input.--half
+                        +custom-input('text', 'card-duration', 'cardDuration', 'Срок действия', '__ / __')(value='12 / 20')
+                    +e.input.--half
+                        +custom-input('text', 'card-code', 'cardCode', 'Защитный код (CVC)', 'CVC', true)(value='123')
+                +e.action
+                    +e.BUTTON.pay(type='submit') Оплатить
+                +e.save-card
+                    +custom-switcher('save-card', 'saveCard')
+                        | Сохранить данные карты в личном кабинете для упрощения процедуры заказа

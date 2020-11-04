@@ -1,0 +1,24 @@
+mixin cart-modal()
+    +b.cart-modal
+        +e.BUTTON.close
+            +icon('close')
+        +e.header
+            +e.title
+                +title
+                    | Корзина
+            +e.BUTTON.clear очистить корзину
+        +e.products
+            each product in cartProducts
+                +e.product
+                    +cart-product(product)
+        +e.data
+            +e.delivery
+                .heading Доставка
+                .value 100 ₽
+            +e.total
+                .heading Итого к оплате:
+                .value 670 ₽
+        +e.actions
+            +e.A.back(href='#') Продолжить покупки
+            +e.A.order(href='#') Перейти к оформлению заказа
+

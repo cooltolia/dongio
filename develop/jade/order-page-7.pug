@@ -2,9 +2,8 @@ include template/header
 include template/footer
 include ../blocks/**/*
 - const alias = "m"
-- const loggedIn = true
-- const bonusWriteOff = true
 - const cartPage = true
+- const addNewCard = true
 
 doctype html
 html(lang='ru')
@@ -14,10 +13,9 @@ html(lang='ru')
         +breadcrumbs(['Корзина', 'Оформление заказа'])
         +order-layout
             +e.main
-                +order-checkout
+                +order-payment
             +e.ASIDE.sidebar
                 +e.bonus-card
                     +bonus-card
-        +sauses
         +main-footer
         +doc-footer

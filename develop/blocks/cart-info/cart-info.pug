@@ -1,6 +1,6 @@
 //- modifiers: ['current', 'empty']
 mixin cart-info(modifier = '', products = 0, sum = 0)
-    +b.A.cart-info(href='#' class=modifier)
+    +b.A.cart-info(href='#' class=modifier class=cartPage ? 'current' : '')
         +e.products
             +icon('cart')
             | :

@@ -34,18 +34,25 @@
         &::after {
             content: '';
             position: absolute;
-            width: 16px;
-            height: 16px;
+            width: 4px;
+            height: 8px;
+            left: 5px;
             top: 50%;
-            left: 0;
-            transform: translateY(-50%);
 
+            border-width: 0 2px 2px 0;
+            border-style: solid;
+            transform: rotate(45deg) translate(-70%, -40%);
+            border-color: $text-color;
             opacity: 0;
-
-            border-radius: 4px;
-            background-color: $grey-dark;
+            border-radius: 2px;
 
             transition: opacity 300ms ease;
+        }
+
+        &:hover {
+            &::before {
+                border-color: $theme-color;
+            }
         }
     }
 
@@ -72,8 +79,9 @@
             }
 
             &::after {
-                width: 30px;
-                height: 30px;
+                width: 8px;
+                height: 11px;
+                left: 11px;
             }
         }
     }

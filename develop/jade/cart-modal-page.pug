@@ -1,0 +1,13 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body(сlass='modal-opened')
+        .modal
+            .modal-inner
+                +cart-modal
+        +doc-footer
