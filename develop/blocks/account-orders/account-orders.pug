@@ -1,0 +1,13 @@
+mixin account-orders()
+    +b.account-orders
+        +e.wrapper
+            +e.list
+                +e.order
+                    +order-card
+            +e.actions
+                if (!accountTestimonial)
+                    +e.BUTTON.trigger(type='button') Оставить отзыв
+                +e.BUTTON.repeat.btn(type='button') Повторить заказ
+        if (accountTestimonial)
+            +e.feedback
+                +testimonial-form

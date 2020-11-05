@@ -1,0 +1,29 @@
+mixin order-card()
+    +b.order-card
+        +e.header
+            +e.header-cell Заказ от 16.09.2020 <span>#123456</span>
+            +e.header-cell Цена
+        +e.body
+            +e.row
+                +e.cell
+                    +e.title
+                        +e.name Пицца Чизбургер
+                        +e.type (Ø 35 см, стандартное тесто)  
+                    +e.selected-ingredients
+                        .item
+                            | Жареный цыпленок
+                        .item
+                            | Халапеньо
+                +e.cell 695 ₽ <br> + 65 ₽
+            +e.row
+                +e.cell
+                    +e.title
+                        +e.name Пепперони
+                        +e.type (Ø 35 см, стандартное тесто)
+                +e.cell 0 ₽
+            +e.row
+                +e.cell Доставка
+                +e.cell 100 ₽
+            +e.row
+                +e.cell Итого :
+                +e.cell 670 ₽

@@ -1,0 +1,10 @@
+mixin testimonial-form()
+    +b.FORM.testimonial-form(method='post' action='#')
+        +e.body
+            +custom-textarea('feedback', 'feedback', 'Ваш отзыв', '')
+        +e.footer
+            +e.rating
+                +star-rating
+            +e.actions
+                +e.BUTTON.submit.btn.disabled(type='submit') Отправить отзыв
+                +e.BUTTON.reset(type='button') Отменить

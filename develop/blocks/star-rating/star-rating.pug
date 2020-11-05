@@ -1,0 +1,19 @@
+mixin star-rating()
+    +b.star-rating
+        +e.label Оцените заказ
+        +e.stars
+            +e.star
+                +icon('star')
+                +e.INPUT.radio(type='radio' name='starRating' value='1')
+            +e.star
+                +icon('star')
+                +e.INPUT.radio(type='radio' name='starRating' value='2')
+            +e.star
+                +icon('star')
+                +e.INPUT.radio(type='radio' name='starRating' value='3')
+            +e.star
+                +icon('star')
+                +e.INPUT.radio(type='radio' name='starRating' value='4')
+            +e.star
+                +icon('star')
+                +e.INPUT.radio(type='radio' name='starRating' value='5')

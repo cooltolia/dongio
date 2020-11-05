@@ -1,0 +1,51 @@
+.testimonial-form {
+    display: flex;
+
+    &__body {
+        width: 50%;
+        flex: 1 1 auto;
+    }
+
+    &__footer {
+        width: 190px;
+        padding-left: 30px;
+        flex: 0 0 auto;
+    }
+
+    &__rating {
+        margin-bottom: 20px;
+    }
+
+    &__submit.btn {
+        padding: 0 10px;
+        height: 36px;
+
+        font-size: 14px;
+    }
+
+    &__reset {
+        @include btn-reset;
+        margin-top: 5px;
+
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.6;
+        color: $grey-dark;
+
+        transition: color 300ms ease;
+
+        &:hover {
+            color: $theme-color-dark;
+        }
+    }
+}
+
+@media #{$tablet} {
+    .testimonial-form {
+    }
+}
+
+@media #{$mobile} {
+    .testimonial-form {
+    }
+}

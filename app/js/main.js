@@ -1276,6 +1276,54 @@ function globalInitFunction() {
     if (socialsImages.length === 0) return;
     lazyLoadImages(socialsImages);
   })();
+  /** and again, demo purpose only
+  *  do not use
+  */
+
+
+  var getStarRating = function getStarRating() {
+    var $stars = document.querySelectorAll('.star-rating__star');
+    var $wrapStars = document.querySelector('.star-rating__stars');
+    if (!$wrapStars) return;
+    var rating = 0;
+    $wrapStars.addEventListener('click', function (e) {
+      var action = 'add';
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = $wrapStars.children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var star = _step.value;
+          star.classList[action]('filled');
+          if (star === e.target) action = 'remove';
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return != null) {
+            _iterator.return();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
+    });
+    $stars.forEach(function (star, i) {
+      var radioBtn = star.querySelector('[type="radio"]');
+      $stars[i].classList.remove('filled');
+      star.addEventListener('click', function () {
+        rating = i + 1;
+        radioBtn.checked = true;
+      });
+    });
+  };
+
+  getStarRating();
 }
 
 function loadScript(url, done) {

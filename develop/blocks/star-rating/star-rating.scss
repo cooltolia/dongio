@@ -1,0 +1,67 @@
+.star-rating {
+    $this: &;
+
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+
+        color: $text-color;
+        font-size: 12px;
+        line-height: 1.6;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+    }
+
+    &__radio {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &__star {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        pointer-events: all;
+        position: relative;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        svg {
+            @include svg-icon;
+            fill: none;
+            stroke: black;
+            pointer-events: none;
+        }
+
+        &.filled {
+            svg {
+                fill: #f2c94c;
+            }
+        }
+
+        svg {
+            stroke-width: 1px;
+            transition: 0.2s ease-in-out;
+        }
+
+        &:hover {
+            svg {
+                stroke-width: 1px;
+                filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.13));
+            }
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+}

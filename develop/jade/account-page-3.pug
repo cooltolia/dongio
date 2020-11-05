@@ -1,0 +1,17 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+- const accountPage = true
+- const loggedIn = true
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +breadcrumbs(['Личный кабинет'])
+        +account-layout
+            +account-orders 
+        +main-footer
+        +doc-footer
