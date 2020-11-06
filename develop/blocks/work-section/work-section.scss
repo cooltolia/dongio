@@ -1,0 +1,56 @@
+.work-section {
+    padding-top: 40px;
+    padding-bottom: 70px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__advantages {
+        margin-bottom: 50px;
+    }
+
+    &__form {
+        max-width: 730px;
+    }
+
+    &__input-row {
+        display: flex;
+        margin: 0 -15px 10px;
+    }
+
+    &__input {
+        width: 25%;
+        flex: 1 1 auto;
+        padding: 0 15px;
+    }
+
+    &__submit {
+        margin-top: 30px;
+        max-width: 285px;
+    }
+}
+
+@media #{$tablet} {
+    .work-section {
+    }
+}
+
+@media #{$mobile} {
+    .work-section {
+        &__input-row {
+            margin: 0 -10px;
+            flex-wrap: wrap;
+        }
+
+        &__input {
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 10px;
+        }
+
+        &__submit {
+            margin-top: 20px;
+        }
+    }
+}

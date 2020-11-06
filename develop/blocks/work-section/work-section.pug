@@ -1,0 +1,31 @@
+mixin work-section()
+    +b.SECTION.work-section
+        +inner
+            +e.title
+                +title('h1')
+                    | Работа в DONGIO
+            +e.advantages
+                +advantages(advantages.work)
+            +e.title
+                +title('h1')
+                    | Приглашаем работать вместе
+            +e.FORM.form(method='post' action='#')
+                +e.input-row
+                    +e.input
+                        +custom-input('text', 'fio', 'fio', 'Имя Фамилия', 'Имя Фамилия', true)
+                    +e.input
+                        +custom-input('text', 'phone', 'phone', 'Телефон', '+7 123 456 78 99', true)
+                +e.input-row
+                    +e.input
+                        +custom-select('district', ['Олимпийский Бульвар, д. 6'], false, 'Адрес *')(class='disabled')
+                    +e.input
+                        +custom-select('district', ['Кассир', 'Администратор', 'Повар'], 'Выберите вакансию', 'Выберите вакансию *')
+                +e.input-row
+                    +e.input
+                        +custom-input('text', 'birthday', 'birthday', 'Дата рождения', 'Дата рождения', true)
+                    +e.input
+                        +custom-input('text', 'link', 'link', 'Ссылка на соц. сеть', 'Вставьте ссылку')
+                +e.input-row
+                    +e.input
+                        +custom-textarea('comment', 'comment', 'Комментарий', 'Комментарий')
+                +e.BUTTON.submit.btn(type='button') Отправить заявку

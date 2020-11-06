@@ -1324,6 +1324,15 @@ function globalInitFunction() {
   };
 
   getStarRating();
+
+  (function () {
+    var workSection = document.querySelector('.work-section');
+    if (!workSection) return;
+    var selects = workSection.querySelectorAll('.custom-select');
+    selects.forEach(function (select) {
+      new CustomSelect(select);
+    });
+  })();
 }
 
 function loadScript(url, done) {

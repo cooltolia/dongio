@@ -1,0 +1,183 @@
+.partners-section {
+    padding-top: 40px;
+    padding-bottom: 70px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__advantages {
+        margin-bottom: 50px;
+    }
+
+    &__form {
+        max-width: 730px;
+    }
+
+    &__input-row {
+        display: flex;
+        margin: 0 -15px 10px;
+        align-items: flex-end;
+    }
+
+    &__input {
+        width: 25%;
+        flex: 1 1 auto;
+        padding: 0 15px;
+    }
+
+    &__toggle {
+        max-width: 255px;
+
+        .icon {
+            position: relative;
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+
+            svg {
+                @include svg-icon;
+
+                fill: currentColor;
+            }
+        }
+
+        &.selected {
+            color: $text-color-white;
+
+            background-color: $text-color;
+            border-color: $text-color;
+        }
+    }
+
+    &__file-upload {
+        margin-bottom: 10px;
+
+        .trigger {
+            @include btn-reset;
+            position: relative;
+            z-index: 1;
+            height: 46px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid $grey-dark;
+            border-radius: 4px;
+
+            background-color: $grey;
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 5px;
+
+            color: $text-color;
+            font-size: 12px;
+            line-height: 1.6;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .input {
+            width: 30%;
+            margin-right: 20px;
+            flex: 1 1 auto;
+            padding: 0 15px;
+            height: 46px;
+            margin-left: -5px;
+
+            color: $text-color;
+            font-size: 16px;
+            line-height: 46px;
+
+            border: 1px solid $grey-dark;
+            border-radius: 4px;
+            outline: none;
+            appearance: none;
+
+            transition: border-color 300ms ease;
+
+            &::placeholder {
+                color: $text-color-light;
+            }
+
+            &:focus {
+                border-color: $text-color;
+            }
+        }
+
+        .tip {
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: 1.6;
+
+            b {
+                font-weight: 600;
+            }
+        }
+
+        .upload {
+            width: 140px;
+            flex: 0 0 auto;
+        }
+    }
+
+    &__submit {
+        margin-top: 30px;
+        max-width: 285px;
+    }
+}
+
+@media #{$tablet} {
+    .partners-section {
+    }
+}
+
+@media #{$mobile} {
+    .partners-section {
+        padding-bottom: 40px;
+        
+        &__input-row {
+            margin: 0 -10px;
+            flex-wrap: wrap;
+        }
+
+        &__input {
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 10px;
+        }
+
+        &__toggle,
+        &__submit {
+            max-width: none;
+            width: 100%;
+        }
+
+        &__file-upload {
+            .row {
+                flex-wrap: wrap;
+            }
+
+            .input {
+                width: 60%;
+                margin-right: 0;
+            }
+
+            .upload {
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+
+        &__submit {
+            margin-top: 20px;
+        }
+    }
+}

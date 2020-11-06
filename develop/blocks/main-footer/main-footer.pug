@@ -26,15 +26,15 @@ mixin main-footer()
             +e.NAV.menu.__column
                 +e.UL.menu-list
                     +e.LI.menu-item
-                        +e.A.menu-link(href='#') Доставка и оплата
+                        +e.A.menu-link(href='#' class=deliveryPage ? 'current' : '') Доставка и оплата
                     +e.LI.menu-item
-                        +e.A.menu-link(href='#') Акции и бонусы
+                        +e.A.menu-link(href='#' class=salesPage ? 'current' : '') Акции и бонусы
                     +e.LI.menu-item
-                        +e.A.menu-link(href='#') Наша команда и кафе
+                        +e.A.menu-link(href='#' class=teamPage ? 'current' : '') Наша команда и кафе
                     +e.LI.menu-item
-                        +e.A.menu-link(href='#') Работа в DONGIO
+                        +e.A.menu-link(href='#' class=workPage ? 'current' : '') Работа в DONGIO
                     +e.LI.menu-item
-                        +e.A.menu-link(href='#') Поставщикам
+                        +e.A.menu-link(href='#' class=partnersPage ? 'current' : '') Поставщикам
                     //- +e.LI.menu-item
                     //-     +e.A.menu-link(href='#') Корпоративные заказы
         +e.bottom

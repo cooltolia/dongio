@@ -1,0 +1,16 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+- const addFile = true
+- const partnersPage = true
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +breadcrumbs(['Поставщикам'])
+        +partners-section
+        +main-footer
+        +doc-footer

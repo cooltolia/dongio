@@ -128,6 +128,18 @@
             {
                 "link": "team-page.html",
                 "text": "Наша команда и кафе"
+            },
+            {
+                "link": "work-page.html",
+                "text": "Работа в DONGIO"
+            },
+            {
+                "link": "partners-page.html",
+                "text": "Поставщикам"
+            },
+            {
+                "link": "partners-page-1.html",
+                "text": "Поставщикам (Прикрепить файл)"
             }
         ]
     }

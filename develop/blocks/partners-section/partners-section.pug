@@ -1,0 +1,39 @@
+mixin partners-section()
+    +b.SECTION.partners-section
+        +inner
+            +e.title
+                +title('h1')
+                    | Есть предложение? Мы с радостью обсудим!
+            +e.FORM.form(method='post' action='#')
+                +e.input-row
+                    +e.input
+                        +custom-input('text', 'company', 'company', 'Компания', 'Название вашей компании', true)
+                    +e.input
+                        +custom-input('text', 'fio', 'fio', 'Имя Фамилия', 'Имя Фамилия', true)
+                +e.input-row
+                    +e.input
+                        +custom-input('text', 'phone', 'phone', 'Телефон', '+7 123 456 78 99', true)
+                    +e.input
+                        +custom-input('email', 'email', 'enail', 'E-mail', 'example@mail.com')
+                +e.input-row
+                    +e.input
+                        +custom-input('text', 'link', 'link', 'Ссылка', 'Ваша ссылка')
+                    +e.input
+                        +e.BUTTON.toggle.btn.btn--grey(type='button' class=addFile ? 'selected' : '')
+                            .icon
+                                +icon('clip') 
+                            | Прикрепить файл
+                if (addFile)
+                    +e.file-upload
+                        .label Прикрепить файл
+                        .row
+                            button.trigger(type='button') Обзор...
+                            input.input(type='text' name='file' placeholder='Файл не выбран...' value='Презентация.pptx' readonly='')
+                            button.upload.btn.btn--orange(type='button') Загрузить
+                        .tip 
+                            | Файл не должен превышать <b>16MB</b><br>
+                            | Допустимые форматы файла: <b>txt  doc  docx  xls  xlsx  pdf  ppt  pptx  zip  rar.</b>
+                +e.input-row
+                    +e.input
+                        +custom-textarea('comment', 'comment', 'Суть вашего предложения', 'Ваше сообщение ')
+                +e.BUTTON.submit.btn.btn--transparent(type='button') Отправить предложение
