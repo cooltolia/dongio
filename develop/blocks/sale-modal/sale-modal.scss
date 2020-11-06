@@ -1,4 +1,4 @@
-.halves-modal {
+.sale-modal {
     position: relative;
     width: 80%;
     max-width: 600px;
@@ -85,7 +85,7 @@
         transition: opacity 300ms ease;
 
         &:first-child {
-            .halves-modal__image:after {
+            .sale-modal__image:after {
                 left: auto;
                 right: 0;
             }
@@ -235,7 +235,7 @@
         justify-content: center;
         align-items: flex-end;
 
-        &:hover ~ .halves-modal__description {
+        &:hover ~ .sale-modal__description {
             transform: translateY(0);
             opacity: 1;
             // pointer-events: all;
@@ -465,11 +465,20 @@
 
     &__price {
         margin-left: auto;
-        margin-right: 30px;
+        margin-right: auto;
+        display: flex;
 
         font-size: 24px;
         font-weight: 600;
         text-align: right;
+        white-space: nowrap;
+
+        .old {
+            margin-right: 10px;
+
+            color: $text-color-light;
+            text-decoration: line-through;
+        }
     }
 
     &__add {
@@ -505,12 +514,12 @@
 }
 
 @media #{$tablet} {
-    .halves-modal {
+    .sale-modal {
     }
 }
 
 @media #{$mobile} {
-    .halves-modal {
+    .sale-modal {
         width: 100%;
 
         &__header {

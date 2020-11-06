@@ -1,0 +1,155 @@
+.sale-section {
+    padding-top: 40px;
+    padding-bottom: 70px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__image {
+        width: 100%;
+        // height: 340px;
+        margin-bottom: 30px;
+
+        border-radius: 4px;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        margin-bottom: 40px;
+        display: flex;
+    }
+
+    &__subtitle {
+        margin: 0;
+        width: 255px;
+        flex: 0 0 auto;
+        margin-right: 10px;
+
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.6;
+    }
+
+    &__data {
+        width: 20%;
+        flex: 1 1 auto;
+        padding-left: 20px;
+
+        &--big {
+            flex-grow: 1.5;
+        }
+
+        p {
+            margin: 0 0 12px;
+
+            font-size: 16px;
+            line-height: 1.6;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            font-size: 16px;
+            line-height: 1.6;
+
+            &.two-columns {
+                columns: 2;
+                column-gap: 20px;
+            }
+
+            li {
+                break-inside: avoid;
+                &::before {
+                    content: '• ';
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        a {
+            color: #ef6135;
+            text-decoration: underline;
+
+            transition: opacity 300ms ease;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__data-title {
+        margin: 0 0 10px;
+
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.6;
+    }
+
+    &__appeal {
+        width: auto;
+    }
+}
+
+@media #{$laptop} {
+    .sale-section {
+        &__data {
+            ul {
+                &.two-columns {
+                    columns: 1;
+                }
+            }
+        }
+    }
+}
+
+@media #{$tablet} {
+    .sale-section {
+    }
+}
+
+@media #{$mobile} {
+    .sale-section {
+        padding-bottom: 40px;
+
+        &__image {
+            margin-bottom: 24px;
+        }
+
+        &__content {
+            display: block;
+        }
+
+        &__subtitle {
+            width: 100%;
+            margin: 0 0 24px;
+        }
+
+        &__data {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 24px;
+
+            // ul {
+            //     &.two-columns {
+            //         columns: 2;
+            //     }
+            // }
+        }
+    }
+}

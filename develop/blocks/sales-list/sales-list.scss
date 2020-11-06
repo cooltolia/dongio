@@ -1,0 +1,47 @@
+.sales-list {
+    padding-top: 40px;
+    padding-bottom: 70px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px -30px;
+    }
+
+    &__card {
+        width: 50%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+}
+
+@media #{$tablet} {
+    .sales-list {
+    }
+}
+
+@media #{$mobile} {
+    .sales-list {
+        padding-bottom: 40px;
+
+        &__wrapper {
+            display: block;
+            margin: 0;
+        }
+
+        &__card {
+            width: 100%;
+            max-width: 400px;
+            padding: 0;
+            margin-bottom: 32px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

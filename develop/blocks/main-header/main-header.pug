@@ -13,11 +13,11 @@ mixin main-header()
             +e.NAV.menu
                 +e.UL.menu-list
                     +e.LI.menu-item
-                        +e.A.menu-link(href='#') Доставка и оплата
+                        +e.A.menu-link(href='#' class=deliveryPage ? 'current' : '') Доставка и оплата
                     +e.LI.menu-item
-                        +e.A.menu-link(href='#') Акции и бонусы
+                        +e.A.menu-link(href='#' class=salesPage ? 'current' : '') Акции и бонусы
                     +e.LI.menu-item
-                        +e.A.menu-link(href='#') Наша команда и кафе
+                        +e.A.menu-link(href='#' class=teamPage ? 'current' : '') Наша команда и кафе
             +e.account
                 +account-trigger
             +e.cart.--mobile

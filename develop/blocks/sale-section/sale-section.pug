@@ -1,0 +1,30 @@
+mixin sale-section()
+    +b.SECTION.sale-section
+        +inner
+            +e.title
+                +title
+                    | 1+1 Пицца в подарок!
+            +e.image
+                img(src='images/sales/image1.jpg', alt='')
+            +e.content
+                +e.H3.subtitle
+                    | К заказу большой пиццы (Ø 35 см) в подарок получаете пиццу такого же размера.
+                +e.data
+                    +e.data-title Пицца в подарок:
+                    ul.two-columns
+                        li Итальянская
+                        li Пепперони
+                        li Острый цыпленок
+                        li Маргарита
+                        li 4 сыра
+                        li Вегетарианская
+                        li Гавайская
+                        li Ветчина и грибы
+                +e.data.--big
+                    +e.data-title
+                        | Важные примечания:
+                    ul
+                        li Стоимость доставки на акционную пиццу&nbsp;100₽. 
+                        li Акция действует только в <a href='./delivery-page.html'>зоне доставки DONGIO.</a>
+                        li Оплата производится за пиццу с наибольшей стоимостью.
+            +e.BUTTON.appeal.btn(type='button') Заказать пиццу по акции

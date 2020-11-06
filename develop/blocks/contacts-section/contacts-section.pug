@@ -1,0 +1,21 @@
+mixin contacts-section()
+    +b.SECTION.contacts-section
+        +e.wrapper
+            +e.data
+                +e.title
+                    +title
+                        | Контакты
+                +e.info
+                    +icon('clock')
+                    | 13:00 — 22:00
+                +e.info
+                    +icon('phone')
+                    a(href='tel:204-54-14') 204 - 54 - 14
+                +e.info
+                    +icon('pointer')
+                    | Олимпийский Бульвар, д.&nbsp;6
+                +e.info
+                    +icon('mail')
+                    a(href='mailto:support@dongio.com') support@dongio.com
+            +e.map
+                img(src='images/team/map.jpg', alt='')

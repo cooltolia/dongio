@@ -1,0 +1,10 @@
+mixin sales-card()
+    +b.ARTICLE.sales-card
+        +e.image
+            img(src='images/sales/image1.jpg', alt='')
+        +e.content
+            +e.title 1+1 Пицца в подарок!
+            +e.P.excerpt К заказу большой пиццы в подарок получаете пиццу такого же размера. Выбор вида пиццы в подарок ограничен.
+            +e.actions
+                +e.BUTTON.trigger.btn(type='button') Применить
+                +e.A.link(href='#') Подробнее

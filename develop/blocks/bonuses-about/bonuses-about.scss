@@ -1,0 +1,71 @@
+.bonuses-about {
+    padding-bottom: 70px;
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__data {
+        width: 30%;
+        flex: 1 1 auto;
+        padding-right: 70px;
+
+        ol {
+            padding: 0;
+            list-style-position: inside;
+
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &__subtitle {
+        margin: 0 0 10px;
+
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.6;
+    }
+}
+
+@media #{$tablet} {
+    .bonuses-about {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+
+        &__data {
+            width: 50%;
+
+            &--card {
+                width: 100%;
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
+
+@media #{$mobile} {
+    .bonuses-about {
+        padding-bottom: 40px;
+        
+        &__wrapper {
+            display: block;
+        }
+
+        &__data {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 32px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

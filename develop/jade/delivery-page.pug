@@ -1,0 +1,15 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+- const deliveryPage = true
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +breadcrumbs(['Доставка и оплата'])
+        +delivery-section
+        +main-footer
+        +doc-footer

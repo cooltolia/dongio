@@ -1,0 +1,9 @@
+mixin advantages(data)
+    +b.advantages
+        each item in data
+            +e.item
+                +e.header
+                    +e.icon
+                        img(src=item.icon, alt='')
+                    +e.title !{item.title}
+                +e.P.text !{item.text}

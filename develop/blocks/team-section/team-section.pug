@@ -1,0 +1,20 @@
+mixin team-section()
+    +b.team-section
+        +inner
+            +e.title
+                +title('h1')
+                    | Наша команда и кафе
+            +e.SECTION.about
+                +e.image
+                    img(src='images/team/image1.jpg', alt='')
+                +e.content
+                    +e.subtitle
+                        +title
+                            | DONGIO
+                    p 
+                        b Маленькая пиццерия на Севере Воронежа. 
+                    p Мы делаем, по-настоящему "живое" тесто для пиццы. Потому что никогда не замораживаем его. Это делает тесто нежным и вкусным. Приготовленное без молока и яиц. Такой продукт лучше усваивается и не вызывает тяжести в желудке.
+            +e.instagram
+                +instagram-snippet
+            +e.contacts
+                +contacts-section

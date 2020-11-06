@@ -1,0 +1,15 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+- const salesPage = true
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +breadcrumbs(['Акции и бонусы', '1+1 Пицца в подарок!'])
+        +sale-section
+        +main-footer
+        +doc-footer

@@ -107,6 +107,28 @@
                 "link": "account-page-4.html",
                 "text": "Личный кабинет (История заказов + отзыв)"
             }
+        ],
+        "additional": [
+            {
+                "link": "sales-page.html",
+                "text": "Акции и бонусы"
+            },
+            {
+                "link": "sale-page.html",
+                "text": "1+1 Пицца в подарок!"
+            },
+            {
+                "link": "sale-modal-page.html",
+                "text": "1+1 — модалка"
+            },
+            {
+                "link": "delivery-page.html",
+                "text": "Доставка и оплата"
+            },
+            {
+                "link": "team-page.html",
+                "text": "Наша команда и кафе"
+            }
         ]
     }
 }

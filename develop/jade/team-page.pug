@@ -1,0 +1,15 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- const alias = "m"
+- const teamPage = true
+
+doctype html
+html(lang='ru')
+    +doc-header
+    body
+        +main-header
+        +breadcrumbs(['Наша команда и кафе'])
+        +team-section
+        +main-footer
+        +doc-footer

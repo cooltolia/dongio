@@ -13,3 +13,9 @@ mixin dev-nav()
                 each page in devNav.account
                     +e.LI.item
                         +e.A.link(href=page.link)= page.text
+        +e.block
+            +e.H2.block-title Другие
+            +e.UL.list
+                each page in devNav.additional
+                    +e.LI.item
+                        +e.A.link(href=page.link)= page.text

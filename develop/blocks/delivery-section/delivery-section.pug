@@ -1,0 +1,26 @@
+mixin delivery-section()
+    +b.SECTION.delivery-section
+        +inner
+            +e.title
+                +title('h1')
+                    | Доставка и оплата
+            +e.wrapper
+                +e.content
+                    +e.subtitle
+                        +title 
+                            | Доставка
+                    p В данный момент у нас налажена доставка в районы: Коминтерновский и Центральный, мы может гарантировать, что пицца будет доставлена горячей в течение 60 минут.
+                    p
+                        b Вы проживаете в другом районе?
+                        | 
+                        | Звоните, договоримся!
+                    +e.BUTTON.appeal.btn(type='button') Заказать звонок
+                +e.map
+                    img(src='images/delivery/map.jpg', alt="")
+            +e.advantages
+                +advantages(advantages.delivery)
+            +e.advantages.--payment
+                +e.subtitle
+                    +title 
+                        | Оплата
+                +advantages(advantages.payment)
